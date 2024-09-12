@@ -1,0 +1,16 @@
+{
+    "id": "-1",
+    "name": null,
+    "aliases": [
+        "-1",
+        "blank",
+        "transparent",
+        "transparant"
+    ],
+    "imagePath": "00_blank.png",
+    "shipPositionsType": null,
+    "spaceTokenLocations": [],
+    "wormholes": [],
+    "planets": [],
+    "source": "other"
+}

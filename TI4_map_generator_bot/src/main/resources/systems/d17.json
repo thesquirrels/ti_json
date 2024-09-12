@@ -1,0 +1,23 @@
+{
+    "id": "d17",
+    "name": "Biaheo/Empero (Mortheus)",
+    "aliases": [
+        "d17",
+        "blaheo",
+        "empero",
+        "glimmer",
+        "mortheus",
+        "DS_mortheus",
+        "biaheo"
+    ],
+    "imagePath": "D17_Biaheo.png",
+    "shipPositionsType": "TYPE02",
+    "spaceTokenLocations": [],
+    "wormholes": [],
+    "planets": [
+        "blaheo",
+        "empero"
+    ],
+    "isNebula": true,
+    "source": "ds"
+}
