@@ -1,0 +1,273 @@
+Commands:
+First you need to create game and set active game you modifying.
+To create game use:
+/create_game gameName vpCount(optional) <- creates game and can set VP count of game, optional
+To set active game use:
+/set_game gameName <- Map name can only contain a-z A-Z 0-9 symbols
+Now automatically sets active map in channels that go: gameName-map-updates
+so in any channel that is named like this, you don't need to set active map, it automatically sets for you
+so switching between games is much easier.
+
+/game set_game_status status gameName(Optional)
+status: open or locked
+Status open, means anyone can edit map, can join map as player;
+Status locked means, only joined players and map creator can edit map. No more players can join
+Game auto locks open map if it's does not have community mode, when any SC card is picked if was open, will get locked.
+/game join gameName <- join an open map to be able to edit even if map is locked
+/game leave gameName <- leave an open map
+/game info gameName <- information of map, status if open/locked and player list
+/game add @playerName... gameName <- add single or multiple players to game, gameName is optional and can bet set if no activeMap present
+/game remove  @playerName... gameName <- remove single or multiple players to game, gameName is optional and can bet set if no activeMap present
+/game set_order @playerName1 @playerName2 .....gameName
+Add all players in order for game
+/game sc_count <- sets game SC count, used if game requires more than 8 Strategy cards, default is 8
+/game setup display_type(optional) vpCount(optional) player_count_for_map(optional) community_mode(optional) alliance_mode(optional) <- sets default display type for game. All (map + player stats), map or player stats, Sets Game VP count (10 default), alliance mode turns off auto planet add to player area when last unit is left on planet
+player_count_for_map set player map count 6 (default) or 8 for bigger map
+community_mode is for games were multiple players handle single faction
+/game setup community_mode:YES
+then
+/game community_setup player1 role1 channel1
+player1 is dummy player in map or real, role1 is the team role and channel1 is team channel
+can setup up to 8 at once
+
+/game replace FACTION_COLOR @replacementPlayer <- can replace a player in game (faction/color), only game players can do command
+/game setup game_custom_name @custom text <- can add custom text to game
+
+For easy of setup suggest first command after map creation use
+/map add_tile setup 0
+This adds a template with positions
+
+Now additional commands:
+/map add_tile tileName positionOnMap
+(We using somno template positions on map. from setup template and you see positions.
+Also we support TopLeft, TopRight, BottomLeft and BottomRight positions corresponding to TL, TR, BL, BR
+Mecatol position is MR)
+/map add_tile_list tileList <- tile list is code from map Generators like TTS uses, example: https://ti4-map-generator.derekpeterson.ca/
+You can use also tileID, so liek TI4 marks tiles 01 is Jord for example
+/remove_tile tileName or position
+/delete_game <-deletes your game, only can delete the map you created
+/show_game gameName(optional) display_type(optional) <- displays the game map, display_type can be set to all, map, stats. Displays map + player stats, just map or just player stats
+If you have active game set, it shows your active game if no game name is defines
+/add_cc colorList(factionList) tile or position <- adds CC to system: colorList can be pink,red,black as example/
+/remove_cc colorList(FactionList) tile or position <- removes CC from system: colorList can be pink,red,black as example/
+/remove_all_cc confirmation(YES) <- need to type in YES, will remove all CCs from active game
+/add_control faction_or_color tile planetList <- need to specify tile and planetList, example /add_control pink 3a arnor,lor
+/remove_control faction_or_color tile planet
+and most interesting is
+/add_units tile unitList faction_or_color add_cc_from_tactics(optional) <- add_cc_from_tactics if types yes or y, will remove CC from tactics and add to tile
+/remove_units tile unitList faction_or_color
+/remove_all_units tile faction_or_color
+/add_damage_unit tile unitList faction_or_color
+/remove_damage_unit tile unitList faction_or_color
+/remove_damage_all_unit tile faction_or_color
+/add_frontier_tokens CONFIRM(YES) <- adds frontier tokens to all tiles that can have one
+
+EXAMPLE
+/add_units faction_or_color tile unitList
+examples
+tile can be tile name or the number of location at bottom right
+like 1a, 2b, 3c etc
+for units
+can do
+carrier, dread, fighter, infantry, inf all go in space by default
+if you want to place to planet need to do
+inf lodor, sd lodor
+or any char combination like
+lodor, lodo, lod, lo, l
+all work to place unit on planet
+example
+/add_units blue 1c carrier, ff, 2 inf l, sd l, 3 inf
+this command would place blue units in tile 1c
+carrier, fighter, 3 infantry in space
+2 infantry and space dock on lodor planet (or any planet beginning with letter L in that tile)
+
+commands improvements:
+/remove_units and /move_units
+priority is move/remove damaged units. If we select priority_no_damage (and type in yes or y)
+units without damage will be removed/moved to other system
+also moves damage to new system by default if option  is not specified
+
+unitList examples and explanation. If don't specify planet, all units go into space
+Listing only unit list, so add into command that you want
+dn <- single dread into space
+dread <- same single dread into space
+3 dn <- 3 dreads added into space
+3 dn, 2 destroyers <- 3dread and 2 dd added into space
+3 dn, 2 dd, gf quann <- 3 dread and 2dd added into space, 1 gf added onto planet quann
+ws, 6 ff, sd quann, 3 inf quann, mech quann <- warsun and 6 fighters added into space, spacedock, 3 infantry and mech added into quann
+
+/move_units systemFrom unitList systemTo unitListTo faction_or_color cc (optional can be no or retreat)
+Standard fields to add tile/system, unit list same as add, remove, and we have optional field addCC, type anything in to not add CC into moved system
+unitListTo <- if you enter 0 or none into as a unit, no unit will spawn in target system :)
+Example:
+/move_units pink quann 2 dn, dd, gf, gf quann wellon 2 dn, dd, 2 gf wellon
+
+now: add_units, remove_units, move_units command, for planet name, you can use short of existing planet
+example
+Arnor/Lor, can use a and l, or ar or arno, or lo
+Sakulag/Lazar example: s and l, or sa and la
+Abyz/Fria like a and f etc
+so you don't need full name, can use first letter or few first letters, if system with same starting letter like
+Tequran/Torkan, can use te and to 🙂
+hope helps speed things up
+
+/add_token tokenName system/tile planetNameOptional <- same as add control counter, specify token and planet name is optional
+/remove_token tokenName system/tile planetNameOptional <- same as add control counter, specify token and planet name is optional
+Attachment tokens can only be added to planets
+
+/player stats .... <- can set all the major stats for player, when SC is picked, TGs automatically added to user Trade Goods from left on SC TGs
+faction_or_color tag helps to define for which player you want to set stats. FOR SELF not needed, needed only if you set for other players
+/player setup faction color hs_tile_position(optional) keleres_hs(options) <- needs to set player faction and color
+/player sc_play faction_color(optional) <- plays your SC that you have in game
+/player sc_pick scNumber <- adds your pick to game. Does not generate map
+/player sc_follow <- removes 1 CC from strategy tokens
+/player send_tg faction <- take tg from your existing ones and send(add) to target faction tg
+/player send_commodities faction <- take commodities from your existing ones and send(add) to target faction tg
+/player pass <- passes
+/player speaker player(optional) <- assigns speaker to player
+/player tech_add techName player(optional) <- adds selected tech to player area
+/player tech_remove techName player(optional) <- removes selected tech to player area
+/player tech_exhaust techName player(optional) <- exhausts selected tech to player area
+/player tech_ready techName player(optional) <- refreshes selected tech to player area
+/player turn player(optional)  <- pings next player in line. Can do turn for any player
+/player planet_add planetName1 planetName2..6(optional) <- adds planet
+/player planet_remove planetName1 planetName2..6(optional) <- removes planet
+/player planet_exhaust planetName1 planetName2..6(optional) <- exhaust planet
+/player planet_ready planetName1 planetName2..6(optional) <- refreshes planet
+/player planet_ready_all <- refreshes all planets
+/player planet_exhaust_all <- exhaust all planets
+/player legendary_exhaust_ability planetName1 planetName2..6(optional) <- exhaust planet ability (legendary)
+/player legendary_ready_ability planetName1 planetName2..6(optional) <- refreshes planet ability (legendary)
+Also if you add a planet that another player has it, it auto removes that planet from other player also transfers ability status, if exhausted, you get exhausted
+
+Cards commands
+/so draw count(optional) <- draws a secret or specified number of secrets
+/so discard soUniqueID <- discards given ID Secret objective and shuffles the SO deck. soUniqueID is generated just for player and are unique each time
+/so info <- sends player all private cards for given game
+/so show soUniqueID player <- sends given Secret Objective to player and changes soUniqueID
+/so show_all player <- sends all Secret Objectives to player
+/so show_all_to_add <- shows all Secret Objectives to all players
+/so show_to_all soUniqueID <- displays SO to table and changes soUniqueID
+/so show_all <- displays all SO to table and changes soUniqueID
+/so deal @player count(optional) <- draws a Secret objective for specified player, can specify count
+/so deal_to_all count(optional) <- draws a Secret objective(s) for all game players
+
+/ac info <- sends player all private cards for given game
+/ac draw count(optional) <- draws a secret or specified number of secrets
+/ac discard acUniqueID <- discards given ID action card and shuffles the ac deck. acUniqueID is generated just for player and are unique each time
+/ac show acUniqueID player <- sends given action card to player and changes acUniqueID
+/ac show_all player <- sends all action cards to player
+/ac show_to_all acUniqueID <- displays ac to table and changes acUniqueID
+/ac play acUniqueID <- displays ac to table that was played and discards
+/ac shuffle_deck <- shuffles Action card deck
+/ac pick_from_discard acUniqueIDFromDiscardPile <- Pick a Action card from discard pile and put in your hand
+/ac shuffle_back_into_deck acUniqueIDFromDiscardPile <- Shuffle Action card from discard pile back into Action card Deck
+/ac reveal_and_put_into_discard <- Reveal top Action card from deck and put into discard pile
+/ac show_discard_list <- Show all discarded Action cards
+/ac send acUniqueID player <- Sends selected AC from your hand to player hand
+/ac send_random player <- Sends random AC from your hand to player hand
+/ac discard_random <- Discards random AC from hand
+/ac show_remaining_card_count <- shows how many AC are left in deck
+
+/pn show pnID player <- shows given PN to player and changes pnID
+/pn show_all player <- shows all PNs to player and changes pnIDs
+/pn show_to_all  pnID <- shows PNs to all
+/pn play pnID <- plays PN, it showed to all and sent back to owner
+/pn send pnID player <- send PN to selected player. If Alliance or SftT automatically is played into target players play area
+/pn purge pnID <- purge Selected PN from game
+
+/agenda draw countOptional <- draw top agendas from deck. Agendas "remain" in deck till you place them. Meaning if you forget to use commands put_top or put_bottom and try reveal agenda, the sent to you will be in deck still :)
+/agenda put_top agendaID <- put given agenda at top. Example you draw A and B agenda. And put A at top, then B at top. You end up with order B, A, to reveal. It's like physically you would do top and next top covers previous one
+/agenda put_bottom agendaID <- puts agenda bottom
+/agenda look_at_top <- shows top agenda, no action possible
+/agenda look_at_bottom <- shows bottom agenda, no action possible
+/agenda show_discarded <- shows discarded agendas and the IDs
+/agenda reveal <- reveals agenda to all with ID and automatically puts in discard pile
+/agenda add_law agendaID optionalTextForElected <- adds law to game map and optionalTextForElected is used to define player, or PO or anything, free text can be entered. AgendaID is used from discard pile or when revealed
+/agenda remove_law agendaID <- removes law from game and puts in discard, ID is showed in map
+/agenda vote_count <- lists vote count, only if planets are used in bot
+/agenda shuffle_deck <- shuffles agenda deck
+/agenda reset_deck <- reset agenda deck and discards to new state
+/agenda reset_draw_state_for_deck <- resets player agenda draw state, when player drew cards but did not put top or bottom, it resets draw
+/agenda shuffle_discard_back_into_deck id <- takes discard agenda and shuffles back into deck
+/agenda cleanup confirm:YES <- refresh all player planets after agenda phase
+
+/status po_reveal_stage1 <- reveals stage 1 public objective
+/status po_reveal_stage2 <- reveals stage 2 public objective
+/status po_add_custom name vpWorth <- adds a custom objective with given name and vp worth, like need law VP, need SO scorable for all, use this
+/status po_remove_custom objectiveID <- removes custom objective
+/status po_score id <- score existing objective
+/status po_unscore id <- unscore if you scored by mistake
+/status po_shuffle_back id <- shuffles given objective back into deck, don't use for custom ones, just remove those
+/status cleanup confirmYES <- cleans up all CCs, all unit damage, resets passed status and SC played and SC player selection :) Also increases round number
+/status sc_trade_goods scNumber(optional) tgCount(optional) <- adds Trade goods to unchoose strategy cards, tgCount is total how much it should be on card, when SC is picked, TGs automatically added to user Trade Goods
+if not specifying SC and TG, it auto adds +1TG to each unselected SC card
+you can also do
+/status sc_trade_goods SC TGCount
+for single TG adding of TG
+/status turn_order <- lists turn order with SC, player and passed status. SC is striked through if played
+
+/explore planet planetName <- explores a planet, handling relic fragments and tokens automatically and discarding others
+/explore frontier tile <- explores a frontier token, handling relic fragments and tokens automatically, discarding others, and removing the frontier token
+/explore draw_and_discard deck count(optional) <- draws a number of explore cards (default 1) from the given deck, and immediately discards them all
+/explore info deck(optional) <- sends list of all cards still in the given explore deck, or in all explore decks if none is given
+/explore discard_from_deck ids <- discards explore cards with given ids (comma separated)
+/explore shuffle_into_deck ids <- discards explore cards with given ids (comma separated)
+/explore use id <- use discarded explore card
+/explore remove ids <- removes explore cards with given ids (comma separated) from the game
+/explore shuffle_back_into_deck ids <- adds explore cards (including purged) with given ids (comma separated) to the deck
+/explore send_fragment type player count(optional) <- sends a number of relic fragments (default 1) of the specified type to another player
+/explore reset confirmYES <- completely resets explore decks, adding all known cards to their decks and shuffling them. useful if you have a game that started before explores were added
+/explore relic_draw <- draws a relic
+/explore relic_exhaust relic <- exhaust specified relic
+/explore relic_ready <- refreshes specified relic
+/explore relic_purge <- purges relic
+/explore relic_show_remaining <- shows remaining relics in deck
+/explore relic_shuffle_back relicID <- shuffle relic back into deck
+/explore relic_add_back_into_deck relicID <- add relic back into deck
+/explore relic_draw_specific relic <- draws a specific relic, can be used to draw relic you already have or variant
+if need to add Enigmatic Device, please use
+/explore relic_draw_specific Enigmatic Device
+Its workaround for that single explore
+
+/special mahact_cc_to_fs color <- adds any color CC to fleet supply
+/special mahact_cc_from_fs color <- removes any color CC from fleet supply
+/special diplo_system tile <- adds CC for diplomacy SC
+/special make_secret_into_po soID <- makes scored Secret objective into public objective. To remove Secret as Public, use /status po_remove_custom poID
+/special adjust_round_number <- set round number for game (default increases when using /status cleanup command)
+/special swap_systems tileID tileIDTo <- swaps two tiles (ghost hero)
+/special search_warrant <- execute command to enable/disable visible Secret objectives
+/special sleeper_token planet... <- adds or removes sleeper token on planet. If no sleeper is present adds, if exists, removes token
+/special ion_token_flip tile <- flip existing ION wormhole token in system/tile
+/special system_info tile <- Shows unit info in given tile
+/special stellar_converter tile <- Use Stellar Converter on it. Add token and remove all units and planet from player area
+/special rise_of_a_messiah <- Adds one infantry to each planet you control, except DMZ and Stellar Converted ones
+
+/leaders unlock leaderID <- unlock leader
+/leaders lock leaderID <- lock leader
+/leaders exhaust leaderID trade_goods <- exhaust leader and can add trade good to leader (like arturo for nomad)
+/leaders ready leaderID <- refresh leader
+/leaders purge leaderID <- purges leader
+/leaders hero_play <- set leader as active. Will be purged after executing /status cleanup. Just for letnev and nomad
+/leaders hero_unplay <- set leader as inactive if you made active by mistake
+/leaders reset <- resets all leaders for faction
+
+/custom agenda_remove_from_game id <- remove agenda from game deck (before game start)
+/custom so_remove_from_game id <- remove SO from game deck (before game start)
+/custom ac_remove_from_game id <- remove AC from game deck (before game start)
+
+/help documentation <- show documentation file
+/help setup_templates <- show setup_templates file
+/help list_tiles <- lists all tiles, use starting number id to add to map
+/help list_games <- lists all available maps that are created
+/help list_planets <- lists all available planets
+/help list_units <- lists all possible units
+
+/milty start sliceCount factionCount anomalies_can_touch < initializes milty draft
+sliceCount - slice count to generate (default is player count + 2, max 9)
+factionCount - faction count to randomize (default is player count + 2, max 25)
+anomalies_can_touch - if set to true, red boarder tiles can touch in slice
+
+/fow add_custom_adjacent_tiles primary_tile adjacent_tiles <- add custom adjacent tiles for game, primary tile a1 example, secondary ones separated in comma, like 2b,2d,2e
+/fow remove_custom_adjacent_tiles primary_tile
+/fow remove_all_custom_adjacent_tiles

@@ -1,0 +1,92 @@
+[
+  {
+    "alias": "winnu",
+    "text": "Choose any 1 technology that has no prerequisites.",
+    "techList": []
+  },
+  {
+  "alias": "argent",
+  "text": "Choose two of the following:",
+  "techList": ["nm","st","ps"]
+  },
+  {
+    "alias": "keleresa",
+    "text": "Choose 2 non-faction technologies owned by other players.",
+    "techList": []
+  },
+  {
+    "alias": "keleresx",
+    "text": "Choose 2 non-faction technologies owned by other players.",
+    "techList": []
+  },
+  {
+    "alias": "keleresm",
+    "text": "Choose 2 non-faction technologies owned by other players.",
+    "techList": []
+  },
+  {
+    "alias": "bentor",
+    "text": "Choose two of the following:",
+    "techList": ["det","sdn","pa"]
+  },
+  {
+    "alias": "celdauri",
+    "text": "Choose two of the following:",
+    "techList": ["amd","st","ps"]
+  },
+  {
+    "alias": "cheiran",
+    "text": "Choose one of the following:",
+    "techList": ["md","sar"]
+  },
+  {
+    "alias": "edyn",
+    "text": "Choose any 3 technologies that have different colors and no prerequisites.",
+    "techList": []
+  },
+  {
+    "alias": "ghoti",
+    "text": "Choose one of the following:",
+    "techList": ["gd","sr"]
+  },
+  {
+    "alias": "gledge",
+    "text": "Choose two of the following:",
+    "techList": ["aida","sdn","ps"]
+  },
+  {
+    "alias": "kolume",
+    "text": "Choose one of the following:",
+    "techList": ["gls","pi"]
+  },
+  {
+    "alias": "kyro",
+    "text": "Choose one of the following:",
+    "techList": ["dxa","bs"]
+  },
+  {
+    "alias": "lanefir",
+    "text": "Choose two of the following:",
+    "techList": ["det","sdn","aida"]
+  },
+  {
+    "alias": "nokar",
+    "text": "Choose two of the following:",
+    "techList": ["det","pa","aida"]
+  },
+  {
+    "alias": "tnelis",
+    "text": "Choose two of the following:",
+    "techList": ["ps","amd","nm"]
+  },
+  {
+    "alias": "vaden",
+    "text": "Choose two of the following:",
+    "techList": ["amd","st","nm"]
+  },
+  {
+    "alias": "kjalengard",
+    "text": "Choose one non-faction unit upgrade technology.",
+    "techList": []
+  }
+]
