@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; URL=./index.html">
-  <script type="text/javascript">
-    // JavaScript fallback for the redirect
-    window.location.href = './index.html';
-  </script>
-</head>
-<body></body>
+  <head>
+    <script type="text/javascript">
+      // Extract the path from the current URL (after the /ti_json/ part)
+      var path = window.location.pathname.replace('/ti_json', '');
+
+      // Redirect to index.html while preserving the path
+      window.location.href = '/ti_json/index.html' + '#' + path;
+    </script>
+  </head>
+  <body></body>
 </html>
+
