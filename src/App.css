@@ -1,0 +1,258 @@
+.App {
+  text-align: left
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove default left padding */
+  margin-left: 0; /* Remove any additional margin */
+}
+/* Set global spacing between list items */
+ul li, ol li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.app-container {
+  display: flex;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  grid-auto-rows: 0.8fr; /* Ensure all rows have equal height */
+}
+.grid-item{
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding:8px;
+}
+.flavor-text {
+  font-size: 10pt;
+  margin-top: auto; /* Pushes the flavor text to the bottom */
+  font-style: italic; /* You can apply more styles here */
+}
+.card-name{
+  padding-bottom: 10px;
+  flex-grow: 1; /* Allow the card name to take up remaining space */
+
+}
+.card-title{
+  display: flex;
+  flex-direction: row; /* Stack elements vertically */
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card-corner{
+  display: flex;
+  flex-direction: row; /* Stack elements vertically */
+  gap:3px;
+}
+.card-type-image{
+  width:40px;
+  height:40px;
+  z-index: 1;
+}
+.card-count {
+  z-index: 2;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+/* Default layout for larger screens (computer browser) */
+.faction-list {
+  column-width: 250px; /* Fixed column width */
+  column-gap: 20px; /* Space between columns */
+  max-height: 90vh; /* Limit the height to avoid scrolling */
+  overflow-y: auto; /* Allow scrolling if content exceeds the height */
+  padding: 20px;
+}
+
+/* Each item in the faction list */
+.faction-list > div {
+  break-inside: avoid; /* Prevent breaking items across columns */
+  margin-bottom: 20px; /* Space between items */
+}
+
+.faction-details {
+  display: flex;
+  gap: 20px; /* Space between columns */
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Each column takes up 1/3 of the width on larger screens */
+.column {
+  flex: 1; /* 1/3 width of the container */
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  color: transparent;
+}
+
+/* General sidebar styles */
+.sidebar {
+  left: 0;
+  top: 0;
+  height: auto;      /* Allow content to define the height */
+  min-height: 100vh; /* Ensure it's at least the height of the viewport */
+  background-color: #333;
+  color: white;
+  text-decoration: none; /* Remove underline from the link */
+  padding: 20px;
+  padding-top: 20px;
+  flex-shrink: 0; /* Ensure the sidebar does not shrink */
+}
+
+/* Style the links inside the sidebar */
+.sidebar a {
+  color: white; /* Make the text white */
+  text-decoration: none; /* Remove the underline */
+  display: block; /* Ensure links take up the full width */
+  margin-bottom: 10px; /* Add spacing between links */
+}
+
+/* Optionally, add a hover effect */
+.sidebar a:hover {
+  color: #ddd; /* Change the color slightly on hover */
+}
+
+/* Main content area */
+.content {
+  flex-grow: 1;
+}
+
+.checkboxes { display: flex;
+  flex-direction: column;
+  gap: 10px;
+  alignItems: center;
+  paddingTop: 20px
+}
+
+.links a {
+  color: white; /* Style the links */
+  text-decoration: none; /* Remove the underline */
+  font-size: 1.17em; /* Same font size as <h3> */
+  font-weight: bold; /* Make the links bold, like <h3> */
+}
+
+/* For mobile screens, hide the sidebar */
+@media (max-width: 768px) {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .faction-list {
+    width: 90vw;
+    column-gap: 0; /* Remove column gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .faction-list > div {
+    margin-bottom: 10px; /* Adjust space between items for mobile */
+  }
+
+  .faction-details {
+    flex-direction: column; /* Stack columns vertically */
+    max-height: none;
+    overflow-y: visible;
+    width: 90vw;
+  }
+
+  .column {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    width: 100%;
+    flex-wrap: wrap; /* Allow the links to wrap to the next line if needed */
+    padding-bottom: 20px;
+  }
+
+  .links a {
+    color: white; /* Style the links */
+    text-decoration: none; /* Remove the underline */
+    font-size: 1.17em; /* Same font size as <h3> */
+    font-weight: bold; /* Make the links bold, like <h3> */
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow the links to wrap to the next line if needed */
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  /* Content area */
+  .content {
+    width: 90vw;
+    padding-top: 10px;
+    height: auto; /* Allow the content to expand with the page */
+    overflow: visible; /* Let the content overflow naturally */
+  }
+
+  /* Hamburger icon for mobile */
+  .arrow-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the arrow */
+    width: 100%;
+  }
+  .arrow {
+    font-size: 20px;
+    color: black;
+    display: inline-block;
+    transform: scaleX(5);
+  }
+}
