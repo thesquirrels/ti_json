@@ -5,6 +5,11 @@
     "techList": []
   },
   {
+    "alias": "sardakk",
+    "text": "None",
+    "techList": []
+  },
+  {
   "alias": "argent",
   "text": "Choose two of the following:",
   "techList": ["nm","st","ps"]
