@@ -1,0 +1,86 @@
+[
+    {
+        "id": "tf1",
+        "initiative": 1,
+        "name": "Lux",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf1",
+        "colourHexCode": "#FFFFFF",
+        "botSCAutomationID": "pok1leadership",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf2",
+        "initiative": 2,
+        "name": "Noctis",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf2",
+        "colourHexCode": "#FFFFFF",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf3",
+        "initiative": 3,
+        "name": "Tyrannus",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf3",
+        "colourHexCode": "#FFFFFF",
+        "botSCAutomationID": "pok3politics",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf4",
+        "initiative": 4,
+        "name": "Civitas",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf4",
+        "colourHexCode": "#FFFFFF",
+        "botSCAutomationID": "te4construction",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf5",
+        "initiative": 5,
+        "name": "Amicus",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf5",
+        "colourHexCode": "#FFFFFF",
+        "botSCAutomationID": "pok5trade",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf6",
+        "initiative": 6,
+        "name": "Calamitas",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf6",
+        "colourHexCode": "#FFFFFF",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf7",
+        "initiative": 7,
+        "name": "Magus",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf7",
+        "colourHexCode": "#FFFFFF",
+        "source": "twilights_fall"
+    },
+    {
+        "id": "tf8",
+        "initiative": 8,
+        "name": "Aeterna",
+        "primaryTexts": [],
+        "secondaryTexts": [],
+        "imageFileName": "tf8",
+        "colourHexCode": "#FFFFFF",
+        "source": "twilights_fall"
+    }
+]
