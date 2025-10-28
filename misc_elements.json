@@ -94,5 +94,117 @@
         "cost": 1
       }
     ]
+  },
+  {
+    "alias": "toldar",
+    "title": "Code Tokens",
+    "components":[
+      {
+        "title": "Pride",
+        "text": "When you win a combat as the attacker, gain 1 honor if your opponent has more victory points than you, or gain 1 dishonor if they have fewer victory points than you; otherwise, gain 1 honor or 1 dishonor and ignore this ability until the end of your turn."
+      },
+      {
+        "title": "Bestow (2 Honor)",
+        "text": "When you pass, you may allow all of your neighbors to each gain 2 commodities, for each neighbor that does, gain 1 commodity."
+      },
+      {
+        "title": "Reflect (5 Honor)",
+        "text": "When you score an objective, if another player has already scored that objective, draw 1 action card."
+      },
+      {
+        "title": "Ascend (8 Honor)",
+        "text": "When you gain this card, gain 1 victory point. When you lose this card, lose 1 victory point."
+      },
+      {
+        "title": "Thwart (2 Dishonor)",
+        "text": "When you would gain 1 or more commodities or trade goods, instead take them from any combination of your neighbors, if able. [Note: not automated, have your neighbors subtract with /player stats]"
+      },
+      {
+        "title": "Deceive (5 Dishonor)",
+        "text": "When you would draw 1 or more action cards, instead take 1 at random from 1 of your neighbors."
+      },
+      {
+        "title": "Scourge (8 Dishonor)",
+        "text": "Purge your promissory notes [Note: even ones in other players hands/play areas]; you cannot gain honor. You treat scored secret objectives as public objectives, instead of public objectives."
+      }
+    ]
+  },
+  {
+    "alias": "belkosea",
+    "title": "Superweapons",
+    "components": [
+      {
+        "title": "Superweapon Availyn",
+        "text": "This system is a nebula. During combat, you may exhaust this card to move up to 3 of your fighters from this system to the active system. [Note: You must be participating in the combat] PRODUCTION 3"
+      },
+      {
+        "title": "Superweapon Caled",
+        "text": "During combat, if a straight line between the center of this system and the center of the active system would cross only parallel non-anomaly borders, you may exhaust this card to destroy 1 ship in that system. [Note: You must be participating in the combat. Cannot hit its own system. Treats hyperlanes as empties for purposes of line drawing.]"
+      },
+      {
+        "title": "Superweapon Glatison",
+        "text": "At any time, you may exhaust this card to repair all of your damaged units. Up to 5 fighters in this system do not count against your ships’ capacity. ANTI-FIGHTER BARRAGE 4(x2) [Note: the AFB is not automated]"
+      },
+      {
+        "title": "Superweapon Grom",
+        "text": "At any time, you may exhaust this card to resolve ANTI-FIGHTER BARRAGE 4 against each fighter in 1 adjacent system (including your own)."
+      },
+      {
+        "title": "Superweapon Mors",
+        "text": "At any time, you may exhaust this card to force each unit in 1 non-adjacent system to become damaged, if able. PLANETARY SHIELD"
+      }
+    ]
+  },
+  {
+    "alias": "firmament",
+    "title": "Plots",
+    "components": [
+      {
+        "title": "Enervate",
+        "text": "You can perform the secondary abilities of the puppeted player's strategy cards without spending command tokens; for \"Leadership,\" you can perform the primary ability instead."
+      },
+      {
+        "title": "Syphon",
+        "text": "When the puppeted player gains commodities, you gain an equal number of trade goods."
+      },
+      {
+        "title": "Seethe",
+        "text": "When this card is revealed, destroy all units on a non-home planet controlled by the puppeted player.\nAt the start of the status phase, destroy 1 of the puppeted player's infantry in any system."
+      },
+      {
+        "title": "Asail",
+        "text": "Apply +1 to the results of each of your combat and unit ability rolls against the puppeted player."
+      },
+      {
+        "title": "Extract",
+        "text": "When this card is revealed, gain 1 non-faction technology owned by the puppeted player.\nWhen the puppeted player gains a non-faction technology, you may spend 4 resources to gain that technology."
+      }
+    ]
+  },
+  {
+    "alias": "obsidian",
+    "title": "Plots",
+    "components":[
+      {
+        "title": "Enervate",
+        "text": "You can perform the secondary abilities of the puppeted player's strategy cards without spending command tokens; for \"Leadership,\" you can perform the primary ability instead."
+      },
+      {
+        "title": "Syphon",
+        "text": "When the puppeted player gains commodities, you gain an equal number of trade goods."
+      },
+      {
+        "title": "Seethe",
+        "text": "When this card is revealed, destroy all units on a non-home planet controlled by the puppeted player.\nAt the start of the status phase, destroy 1 of the puppeted player's infantry in any system."
+      },
+      {
+        "title": "Asail",
+        "text": "Apply +1 to the results of each of your combat and unit ability rolls against the puppeted player."
+      },
+      {
+        "title": "Extract",
+        "text": "When this card is revealed, gain 1 non-faction technology owned by the puppeted player.\nWhen the puppeted player gains a non-faction technology, you may spend 4 resources to gain that technology."
+      }
+    ]
   }
 ]

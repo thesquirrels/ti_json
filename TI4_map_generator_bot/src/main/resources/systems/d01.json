@@ -1,6 +1,6 @@
 {
     "id": "d01",
-    "name": "Rhune (Veldyr)",
+    "name": "Rhune - Veldyr",
     "aliases": [
         "d01",
         "rhune",
@@ -8,7 +8,8 @@
         "rhne",
         "veldyr",
         "sovereignty",
-        "DS_veldyr"
+        "DS_veldyr",
+        "4200"
     ],
     "imagePath": "D01_Rhune.png",
     "shipPositionsType": "TYPE01",
@@ -17,5 +18,7 @@
     "planets": [
         "rhune"
     ],
-    "source": "ds"
+    "source": "ds",
+    "tileBack": "green"
+    
 }

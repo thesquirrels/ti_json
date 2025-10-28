@@ -21,6 +21,7 @@ function App() {
     const [dataSources, setDataSources] = useState({
         basePok: true,
         keleres: true,
+        thunders_edge: false,
         discordantStars: false,
     });
 
@@ -74,6 +75,12 @@ function App() {
                 loadedFactions = [...loadedFactions, ...dsFactions];
             }
 
+            if (dataSources.thunders_edge) {
+                const dsResponse = await fetch(dataDir + 'data/factions/te_factions.json');
+                const dsFactions = await dsResponse.json();
+                loadedFactions = [...loadedFactions, ...dsFactions];
+            }
+
             setFactions(loadedFactions);
         }
 
@@ -101,7 +108,10 @@ function App() {
                     />
                     <Route
                         path="factions/:source/:alias"
-                        element={<FactionDetails dataDir={dataDir}/>}
+                        element={<FactionDetails dataDir={dataDir}
+                                     dataSources={dataSources}
+                                     handleDataSourceChange={handleDataSourceChange}
+                        />}
                     />
                     <Route path="agendas" element={<Agendas
                         dataDir={dataDir}

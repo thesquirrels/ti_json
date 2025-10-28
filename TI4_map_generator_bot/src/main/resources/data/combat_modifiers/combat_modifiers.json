@@ -1,34 +1,5 @@
 [
     {
-        "alias": "plus3_1combat_all",
-        "type": "DIE_MOD",
-        "value": "+3",
-        "scope": "",
-        "forCombatAbility": "combatround",
-        "persistenceType": "ONE_COMBAT",
-        "related": [
-            {
-                "type": "action_cards",
-                "alias": "close_quarters"
-            }
-        ]
-    },
-    {
-        "alias": "plus3_1combat_all_opponent",
-        "type": "DIE_MOD",
-        "value": "+3",
-        "scope": "",
-        "forCombatAbility": "combatround",
-        "applyToOpponent": true,
-        "persistenceType": "ONE_COMBAT",
-        "related": [
-            {
-                "type": "action_cards",
-                "alias": "close_quarters"
-            }
-        ]
-    },
-    {
         "alias": "minus4_bombard",
         "type": "DIE_MOD",
         "value": "-4",
@@ -73,6 +44,20 @@
                 "message": "Naaz Mechs get +1 die due to Flagship"
             }
         ]
+    },
+    {
+        "alias": "plus_1_mechs_naaz_sigma_flagship",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "mf",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_naazrokha_flagship_1"
+            }
+        ],
+        "forCombatAbility": "combatround"
     },
     {
         "alias": "plus1_1round_all",
@@ -149,6 +134,10 @@
             {
                 "type": "promissory_notes",
                 "alias": "tekklar"
+            },
+            {
+                "type": "promissory_notes",
+                "alias": "sigma_tekklar_legion"
             }
         ]
     },
@@ -306,6 +295,22 @@
         ]
     },
     {
+        "alias": "plus1_roll_in_arcane_citadel",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "arcane_defender",
+        "scope": "_groundforce_",
+        "forCombatAbility": "combatround",
+        "related": [
+            {
+                "type": "custom",
+                "alias": "custom",
+                "message": ":shield: Defenders get +1 to rolls in the arcane citadel."
+            }
+        ]
+    },
+    {
         "alias": "nivyn_commander",
         "type": "extrarolls",
         "value": "+1",
@@ -335,6 +340,22 @@
                 "type": "custom",
                 "alias": "custom",
                 "message": "> Lizho Commander Grants an Extra Die\n"
+            }
+        ]
+    },
+    {
+        "alias": "toldar_commander",
+        "type": "extrarolls",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "toldar_commander_particular",
+        "scope": "_best_",
+        "forCombatAbility": "combatround",
+        "related": [
+            {
+                "type": "custom",
+                "alias": "custom",
+                "message": "> Toldar Commander Grants an Extra Die\n"
             }
         ]
     },
@@ -415,6 +436,96 @@
             }
         ],
         "forCombatAbility": "AFB"
+    },
+    {
+        "alias": "plus1_roll_asail_afb",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_been_asailed",
+        "scope": "_best_",
+        "related": [
+            {
+                "type": "ability",
+                "alias": "marionettes"
+            }
+        ],
+        "forCombatAbility": "AFB"
+    },
+    {
+        "alias": "plus1_roll_asail_spacecannon_off",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_been_asailed",
+        "scope": "_best_",
+        "related": [
+            {
+                "type": "ability",
+                "alias": "marionettes"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "plus1_roll_asail_spacecannon_def",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_been_asailed",
+        "scope": "_best_",
+        "related": [
+            {
+                "type": "ability",
+                "alias": "marionettes"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
+    },
+    {
+        "alias": "plus1_roll_asail_bombard",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_been_asailed",
+        "scope": "_best_",
+        "related": [
+            {
+                "type": "ability",
+                "alias": "marionettes"
+            }
+        ],
+        "forCombatAbility": "bombardment"
+    },
+    {
+        "alias": "plus1_roll_asail_combat",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_been_asailed",
+        "scope": "_best_",
+        "related": [
+            {
+                "type": "ability",
+                "alias": "marionettes"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "plus1_per_opponent_sftt",
+        "type": "result_modifier",
+        "value": "+1",
+        "valueScalingType": "opponent_sftt",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_has_sftt",
+        "related": [
+            {
+                "type": "breakthrough",
+                "alias": "winnubt"
+            }
+        ],
+        "forCombatAbility": "combatround"
     },
     {
         "alias": "plus1_roll_plasmascoring_afb",
@@ -504,6 +615,130 @@
         "forCombatAbility": "SpaceCannonDefence"
     },
     {
+        "alias": "plus_2_sigma_argent_spacecannonoffence",
+        "type": "mods",
+        "value": "+2",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_1",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_1"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "minus_2_sigma_argent_spacecannonoffence",
+        "type": "mods",
+        "value": "-2",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_1",
+        "scope": "",
+        "applyToOpponent": true,
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_1"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "plus_2_sigma_argent_spacecannondefence",
+        "type": "mods",
+        "value": "+2",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_1",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_1"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
+    },
+    {
+        "alias": "minus_2_sigma_argent_spacecannondefence",
+        "type": "mods",
+        "value": "-2",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_1",
+        "scope": "",
+        "applyToOpponent": true,
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_1"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
+    },
+    {
+        "alias": "plus_3_sigma_argent_spacecannonoffence",
+        "type": "mods",
+        "value": "+3",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_2",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "minus_3_sigma_argent_spacecannonoffence",
+        "type": "mods",
+        "value": "-3",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_2",
+        "scope": "",
+        "applyToOpponent": true,
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "plus_3_sigma_argent_spacecannondefence",
+        "type": "mods",
+        "value": "+3",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_2",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
+    },
+    {
+        "alias": "minus_3_sigma_argent_spacecannondefence",
+        "type": "mods",
+        "value": "-3",
+        "persistenceType": "CONDITIONAL",
+        "condition": "sigma_argent_flagship_2",
+        "scope": "",
+        "applyToOpponent": true,
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_argent_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
+    },
+    {
         "alias": "plus1_roll_plasmascoring",
         "type": "extrarolls",
         "value": "+1",
@@ -549,6 +784,10 @@
             {
                 "type": "ability",
                 "alias": "unrelenting"
+            },
+            {
+                "type": "tech",
+                "alias": "tf-unrelenting"
             }
         ],
         "forCombatAbility": "combatround"
@@ -559,7 +798,7 @@
         "value": "+2",
         "persistenceType": "CONDITIONAL",
         "condition": "units_two_matching_not_ff",
-        "scope": "_ship_",
+        "scope": "_ship_no_ff",
         "related": [
             {
                 "type": "ability",
@@ -612,6 +851,21 @@
         "forCombatAbility": "combatround"
     },
     {
+        "alias": "plus_x_code_always_mech",
+        "type": "mods",
+        "value": "+1",
+        "valueScalingType": "code",
+        "persistenceType": "ALWAYS",
+        "scope": "mf",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "toldar_mech"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
         "alias": "plus_x_law_always_flagship",
         "type": "mods",
         "value": "+1",
@@ -622,21 +876,6 @@
             {
                 "type": "unit",
                 "alias": "edyn_flagship"
-            }
-        ],
-        "forCombatAbility": "combatround"
-    },
-    {
-        "alias": "plus_x_po_others_scored_always_mech",
-        "type": "mods",
-        "value": "+1",
-        "valueScalingType": "po_opponent_exclusively_scored",
-        "persistenceType": "ALWAYS",
-        "scope": "mf",
-        "related": [
-            {
-                "type": "unit",
-                "alias": "kyro_mech"
             }
         ],
         "forCombatAbility": "combatround"
@@ -684,9 +923,83 @@
             {
                 "type": "unit",
                 "alias": "sardakk_flagship"
+            },
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_1"
             }
         ],
         "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "plus_1_always_with_flagship_combat",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_2"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "plus_1_always_with_flagship_bombard",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_2"
+            }
+        ],
+        "forCombatAbility": "bombardment"
+    },
+    {
+        "alias": "plus_1_always_with_flagship_afb",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_2"
+            }
+        ],
+        "forCombatAbility": "AFB"
+    },
+    {
+        "alias": "plus_1_always_with_flagship_cannon_off",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonOffence"
+    },
+    {
+        "alias": "plus_1_always_with_flagship_cannon_def",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "scope": "",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_norr_flagship_2"
+            }
+        ],
+        "forCombatAbility": "SpaceCannonDefence"
     },
     {
         "alias": "plus_x_opponent_unit_tech_always_flagship",
@@ -714,6 +1027,25 @@
             {
                 "type": "unit",
                 "alias": "mahact_flagship"
+            },
+            {
+                "type": "unit",
+                "alias": "sigma_mahact_flagship_2"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "plus_1_opponent_cc_not_in_fleet_flagship",
+        "type": "mods",
+        "value": "+2",
+        "persistenceType": "CONDITIONAL",
+        "condition": "opponent_no_cc_fleet",
+        "scope": "fs",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_mahact_flagship_1"
             }
         ],
         "forCombatAbility": "combatround"
@@ -1021,6 +1353,25 @@
             {
                 "type": "unit",
                 "alias": "winnu_flagship"
+            },
+            {
+                "type": "unit",
+                "alias": "sigma_winnu_flagship_1"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "roll_1_for_every_enemy_ship",
+        "type": "extrarolls",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "valueScalingType": "opponent_ship",
+        "scope": "fs",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "sigma_winnu_flagship_2"
             }
         ],
         "forCombatAbility": "combatround"
@@ -1041,6 +1392,21 @@
         "forCombatAbility": "combatround"
     },
     {
+        "alias": "plus_1_for_every_round_of_combat",
+        "type": "mods",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "valueScalingType": "combat_round",
+        "scope": "mf",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "uydai_mech"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
         "alias": "roll_1_for_every_adjacent_mech_comb",
         "type": "extrarolls",
         "value": "+1",
@@ -1054,6 +1420,51 @@
             }
         ],
         "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "roll_1_for_every_adjacent_asteroid_comb",
+        "type": "extrarolls",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "valueScalingType": "adjacent_asteroid",
+        "scope": "fs",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "zelian_flagship"
+            }
+        ],
+        "forCombatAbility": "combatround"
+    },
+    {
+        "alias": "roll_1_for_every_adjacent_asteroid_bomb",
+        "type": "extrarolls",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "valueScalingType": "adjacent_asteroid",
+        "scope": "fs",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "zelian_flagship"
+            }
+        ],
+        "forCombatAbility": "bombardment"
+    },
+    {
+        "alias": "roll_1_for_every_adjacent_asteroid_afb",
+        "type": "extrarolls",
+        "value": "+1",
+        "persistenceType": "ALWAYS",
+        "valueScalingType": "adjacent_asteroid",
+        "scope": "fs",
+        "related": [
+            {
+                "type": "unit",
+                "alias": "zelian_flagship"
+            }
+        ],
+        "forCombatAbility": "AFB"
     },
     {
         "alias": "roll_1_for_every_adjacent_mech_bomb",

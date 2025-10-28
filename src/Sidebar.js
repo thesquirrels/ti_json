@@ -36,6 +36,14 @@ const Sidebar = ({dataSources, handleDataSourceChange }) => {
                 <label>
                     <input
                         type="checkbox"
+                        checked={dataSources.thunders_edge}
+                        onChange={() => handleDataSourceChange('thunders_edge')}
+                    />
+                    Thunder's Edge
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
                         checked={dataSources.discordantStars}
                         onChange={() => handleDataSourceChange('discordantStars')}
                     />
@@ -43,12 +51,12 @@ const Sidebar = ({dataSources, handleDataSourceChange }) => {
                 </label>
             </div>
         </div>
-        <div className={"arrow-container"}>
-            <span className="arrow">⌄</span>
-        </div>
+            <div className={"arrow-container"}>
+                <span className="arrow">⌄</span>
+            </div>
         </>
-)
-    ;
+    )
+        ;
 };
 
 export default Sidebar;

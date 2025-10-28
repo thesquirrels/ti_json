@@ -88,5 +88,45 @@
     "alias": "kjalengard",
     "text": "Choose one non-faction unit upgrade technology.",
     "techList": []
+  },
+  {
+    "alias": "toldar",
+    "text": "Choose 1 green or blue technology with no prerequisites.",
+    "techList": []
+  },
+  {
+    "alias": "belkosea",
+    "text": "Choose 1 yellow or red technology with no prerequisites.",
+    "techList": []
+  },
+  {
+    "alias": "ralnel",
+    "text": "Choose 1 red or green technology with no prerequisites.",
+    "techList": []
+  },
+  {
+    "alias": "bastion",
+    "text": "Choose 1 blue or yellow technology with no prerequisites.",
+    "techList": []
+  },
+  {
+    "alias": "firmament",
+    "text": "Choose 1 green or yellow technology with no pre-requisites.",
+    "techList": []
+  },
+  {
+    "alias": "deepwrought",
+    "text": "During setup, research technology twice.",
+    "techList": []
+  },
+  {
+    "alias": "crimson",
+    "text": "Choose 1 red or blue technology with no pre-requisites.",
+    "techList": []
+  },
+  {
+    "alias": "obsidian",
+    "text": "N/A",
+    "techList": []
   }
 ]

@@ -9,6 +9,7 @@ function FactionList({ factions, renderFactionDecal, dataSources, handleDataSour
     const pokFactions = factions.filter(faction => faction.source === 'pok');
     const keleresFactions = factions.filter(faction => faction.source === 'codex3');
     const discordantStarsFactions = factions.filter(faction => faction.source === 'ds');
+    const teFactions = factions.filter(faction => faction.source === 'thunders_edge');
     const [isMobileView, setIsMobileView] = useState(false); // State to track mobile view
 
     // Function to detect mobile view
@@ -66,8 +67,9 @@ function FactionList({ factions, renderFactionDecal, dataSources, handleDataSour
         <div className="App">
             <div className="faction-list">
                 {renderFactionList(baseFactions, 'Base Factions', renderFactionDecal)}
-                {renderFactionList(pokFactions, 'PoK Factions', renderFactionDecal)}
+                {renderFactionList(pokFactions, 'Prophecy of Kings Factions', renderFactionDecal)}
                 {renderFactionList(keleresFactions, 'Keleres', renderFactionDecal)}
+                {renderFactionList(teFactions, 'Thunder\'s Edge Factions', renderFactionDecal)}
                 {renderFactionList(discordantStarsFactions, 'Discordant Stars Factions', renderFactionDecal)}
             </div>
         </div>

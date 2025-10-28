@@ -5,6 +5,8 @@ function ActionCards({dataDir, dataSources, handleDataSourceChange}) {
 
     const actionCardSources = [
         'data/action_cards/action_cards.json',
+        'data/action_cards/uncharted_space.json',
+        'data/action_cards/te_actioncards.json'
     ];
 
     const [data, setData] = useState([]);
@@ -32,7 +34,8 @@ function ActionCards({dataDir, dataSources, handleDataSourceChange}) {
     // List of card names to include even if they are duplicates
     const inclusionList = [
         'Flank Speed', 'Sabotage', 'War Machine', 'Diplomatic Pressure', 'Direct Hit',
-        'Maneuvering Jets', 'Morale Boost', 'Shields Holding', 'Skilled Retreat'
+        'Maneuvering Jets', 'Morale Boost', 'Shields Holding', 'Skilled Retreat', 'Pirate Contract',
+        'Strategize'
     ];
 
     // Set to track unique card names
@@ -46,7 +49,9 @@ function ActionCards({dataDir, dataSources, handleDataSourceChange}) {
                 actionCard.source === 'codex1' || actionCard.source === 'pok')) ||
             (dataSources.keleres && actionCard.source === 'codex2') ||
             (dataSources.keleres && actionCard.source === 'codex3') ||
-            (dataSources.discordantStars && actionCard.source === 'ds')
+            (dataSources.discordantStars && actionCard.source === 'ds') ||
+            (dataSources.keleres && actionCard.source === 'codex4') ||
+            (dataSources.thunders_edge && actionCard.source === 'thunders_edge')
         );
         // If the card is not from the selected sources, ignore it
         if (!isFromSelectedSource) return false; // Filter out cards not from the selected sources

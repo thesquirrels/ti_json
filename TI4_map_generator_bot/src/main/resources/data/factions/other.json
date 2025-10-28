@@ -93,31 +93,34 @@
         "source": "admins"
     },
     {
-        "alias": "qulane",
-        "factionName": "The Seers of Qulane",
-        "homeSystem": "qulane",
-        "startingFleet": "cv,2 dd,3 ff,4 inf m,sd k",
-        "commodities": 2,
+        "alias": "arachian",
+        "factionName": "Arachian Weave",
+        "homeSystem": "ar1",
+        "startingFleet": "1 cv, 1 dn, 1 dd, 1 inf a, 1 inf k, 3 ff, 1 sd a",
+        "commodities": 3,
         "factionTech": [
-            "gjenspecterii",
-            "ciqineqreceptors"
+            "araracg",
+            "araracy"
         ],
-        "startingTech": [],
+        "startingTech": [
+            "td"
+        ],
         "homePlanets": [
-            "kull",
-            "minaluk"
+            "arachia",
+            "keqo"
         ],
         "abilities": [
-            "revelation",
-            "redemption"
+            "interstellar_string_walk",
+            "predatory_ambush",
+            "strong_webs"
         ],
         "leaders": [
-            "qulaneagent",
-            "qulanecommander",
-            "qulanehero"
+            "arachianagent",
+            "arachiancommander",
+            "arachianhero"
         ],
         "promissoryNotes": [
-            "qulaneafterssight"
+            "arachianpn"
         ],
         "units": [
             "fighter",
@@ -125,12 +128,12 @@
             "cruiser",
             "carrier",
             "dreadnought",
-            "qulane_flagship",
-            "qulane_infantry",
-            "qulane_mech",
+            "arachian_flagship",
+            "infantry",
+            "arachian_mech",
             "pds",
             "spacedock"
         ],
-        "source": "ignis_aurora"
+        "source": "other"
     }
 ]

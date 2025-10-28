@@ -2,8 +2,7 @@ import {useParams, Link, useLocation} from "react-router-dom";
 import React, {useEffect, useLayoutEffect, useState} from "react";
 import './App.css';
 
-function FactionDetails({ match , dataDir}) {
-
+function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange}) {
     const { source, alias } = useParams(); // Get both source and alias from the URL
     const [selectedFaction, setSelectedFaction] = useState(null);
 
@@ -12,6 +11,7 @@ function FactionDetails({ match , dataDir}) {
     const [homePlanetData, setHomePlanetData] = useState([]);  // Store home planet data
     const [unitData, setUnitData] = useState([]);  // Store all unit data
     const [extraComponents, setExtraComponents] = useState([]);
+    const [breakthroughData, setBreakthroughData] = useState([]);
     const [customStartingTech, setCustomStartingTech] = useState([]);
     const [techData, setTechData] = useState([]);  // Store technology data
     const [promissoryNoteData, setPromissoryNoteData] = useState([]);
@@ -34,13 +34,15 @@ function FactionDetails({ match , dataDir}) {
 
     useEffect(() => {
         async function fetchFactionDetails() {
-            const factionFile = source === 'codex3' ? 'keleres.json' : `${source}.json`;
+            const factionFileMap = {
+                codex3: 'keleres.json',
+                thunders_edge: 'te_factions.json',
+            };
+            const factionFile = factionFileMap[source] ?? `${source}.json`;
             try {
                 const response = await fetch(dataDir + `data/factions/${factionFile}`);
-                console.log(response)
                 const data = await response.json();
                 const foundFaction = data.find(faction => faction.alias === alias);
-                console.log(alias)
                 setSelectedFaction(foundFaction);
             } catch (error) {
                 console.error('Error fetching faction data:', error);
@@ -319,18 +321,17 @@ function FactionDetails({ match , dataDir}) {
         if (selectedFaction && selectedFaction.source) {
             async function fetchLeaderData() {
                 try {
-                    let leaderResponse;
-                    // Conditional logic based on selectedFaction.source
-                    if (selectedFaction.source === "base" || selectedFaction.source === "codex3") {
-                        // Handle case where source is "base"
-                        leaderResponse = await fetch(dataDir + 'data/leaders/pok.json');
-                    } else {
-                        // Default case: fetch based on the source value
-                        leaderResponse = await fetch(dataDir + `data/leaders/${selectedFaction.source}.json`);
+                    var files = [dataDir + 'data/leaders/pok.json'];
+                    files.push(dataDir + 'data/leaders/te_leaders.json');
+                    if (selectedFaction.source === 'ds') {
+                        files.push(dataDir + 'data/leaders/ds.json');
                     }
-
-                    const leaderJson = await leaderResponse.json();
-                    setLeaderData(leaderJson);  // Store leader data
+                    var uniqueFiles = Array.from(new Set(files));
+                    var jsons = await Promise.all(uniqueFiles.map(function (url) {
+                        return fetch(url).then(function (r) { return r.json(); });
+                    }));
+                    var leaderData = [].concat.apply([], jsons); // flat()
+                    setLeaderData(leaderData);  // Store leader data
                 } catch (error) {
                     console.error("Error fetching leader data:", error);
                 }
@@ -344,7 +345,12 @@ function FactionDetails({ match , dataDir}) {
         if (selectedFaction && selectedFaction.source) {
             async function fetchAbilityData() {
                 try {
-                    var abilitySource = selectedFaction.source === "codex3" ? "other" : selectedFaction.source;
+                    var abilitySource =
+                        selectedFaction.source === "codex3"
+                        ? "other"
+                        : selectedFaction.source === "thunders_edge"
+                        ? "te_abilities"
+                        : selectedFaction.source;
                     const abilityResponse = await fetch(dataDir + `data/abilities/${abilitySource}.json`);
                     const abilityJson = await abilityResponse.json();
                     setAbilityData(abilityJson);  // Store ability data
@@ -353,6 +359,22 @@ function FactionDetails({ match , dataDir}) {
                 }
             }
             fetchAbilityData();
+        }
+    }, [selectedFaction]);
+
+    // Load faction ability data based on the selected faction's source
+    useEffect(() => {
+        if (selectedFaction && selectedFaction.source) {
+            async function fetchBreakthroughData() {
+                try {
+                    const btResponse = await fetch(dataDir + `data/breakthroughs/te_breakthroughs.json`);
+                    const btJson = await btResponse.json();
+                    setBreakthroughData(btJson);  // Store ability data
+                } catch (error) {
+                    console.error("Error fetching breakthrough data:", error);
+                }
+            }
+            fetchBreakthroughData();
         }
     }, [selectedFaction]);
 
@@ -380,19 +402,16 @@ function FactionDetails({ match , dataDir}) {
         if (selectedFaction && selectedFaction.source) {
             async function fetchTechData() {
                 try {
-                    let techData = [];
-
-                    // Fetch "pok" data for both "pok" and "ds" sources
-                    const pokResponse = await fetch(dataDir + 'data/technologies/pok.json');
-                    const pokJson = await pokResponse.json();
-                    techData = [...pokJson]; // Initialize techData with pok data
-
-                    // Fetch "ds" data if the source is "ds"
-                    if (selectedFaction.source === "ds") {
-                        const dsResponse = await fetch(dataDir + 'data/technologies/ds.json');
-                        const dsJson = await dsResponse.json();
-                        techData = [...techData, ...dsJson]; // Combine pok and ds data
+                    var files = [dataDir + 'data/technologies/pok.json'];
+                    files.push(dataDir + 'data/technologies/te_techs.json');
+                    if (selectedFaction.source === 'ds') {
+                        files.push(dataDir + 'data/technologies/ds.json');
                     }
+                    var uniqueFiles = Array.from(new Set(files));
+                    var jsons = await Promise.all(uniqueFiles.map(function (url) {
+                        return fetch(url).then(function (r) { return r.json(); });
+                    }));
+                    var techData = [].concat.apply([], jsons); // flat()
                     setTechData(techData); // Set the combined tech data
                 } catch (error) {
                     console.error("Error fetching tech data:", error);
@@ -406,17 +425,19 @@ function FactionDetails({ match , dataDir}) {
     useEffect(() => {
         if (selectedFaction && selectedFaction.source) {
             async function fetchUnitData() {
-                var unitSource = selectedFaction.source === "base"
-                    ? "pok"
-                    : selectedFaction.source === "codex3"
-                        ? "keleres"
-                        : selectedFaction.source;
-
-                const unitResponse = await fetch(dataDir + `data/units/${unitSource}.json`);
                 try {
-                    // Handle special case for base source
-                    const unitJson = await unitResponse.json();
-                    setUnitData(unitJson);
+                    var files = [dataDir + 'data/units/pok.json'];
+                    files.push(dataDir + 'data/units/te_units.json');
+                    files.push(dataDir + 'data/units/keleres.json');
+                    if (selectedFaction.source === 'ds') {
+                        files.push(dataDir + 'data/units/ds.json');
+                    }
+                    var uniqueFiles = Array.from(new Set(files));
+                    var jsons = await Promise.all(uniqueFiles.map(function (url) {
+                        return fetch(url).then(function (r) { return r.json(); });
+                    }));
+                    var unitData = [].concat.apply([], jsons); // flat()
+                    setUnitData(unitData);  // Store leader data
                 } catch (error) {
                     console.error("Error fetching unit data:", error);
                 }
@@ -449,7 +470,7 @@ function FactionDetails({ match , dataDir}) {
     useEffect(() => {
         async function fetchCustomStartingTech() {
             try {
-                const response = await fetch('../../starting_tech.json'); // Adjust path accordingly
+                const response = await fetch('ti_json/starting_tech.json'); // Adjust path accordingly
                 const data = await response.json();
                 setCustomStartingTech(data);
             } catch (error) {
@@ -463,7 +484,7 @@ function FactionDetails({ match , dataDir}) {
     useEffect(() => {
         async function fetchExtraComponents() {
             try {
-                const response = await fetch('../../misc_elements.json'); // Adjust path as necessary
+                const response = await fetch('ti_json/misc_elements.json'); // Adjust path as necessary
                 const data = await response.json();
                 setExtraComponents(data);
             } catch (error) {
@@ -503,6 +524,70 @@ function FactionDetails({ match , dataDir}) {
             });
         }
     }, []); // Dependency array now includes 'location', so this effect runs on route changes
+
+    // Picks the best unit for a given baseType ("mech" or "flagship")
+// Priority: thunders_edge > codex4 > codex3 > ds > pok
+    function pickLatestUnit(units, baseType, selectedFaction, dataSources, normalizeFactionAlias) {
+        units = units || [];
+        dataSources = dataSources || {};
+        var factionAlias = selectedFaction && selectedFaction.alias ? selectedFaction.alias : '';
+        factionAlias = factionAlias.toLowerCase();
+
+        // Filter to this faction + baseType
+        var sameType = [];
+        for (var i = 0; i < units.length; i++) {
+            var u = units[i];
+            if (!u) continue;
+            var uFaction = u.faction ? String(u.faction).toLowerCase() : '';
+            if (normalizeFactionAlias(uFaction) === normalizeFactionAlias(factionAlias) && u.baseType === baseType) {
+                sameType.push(u);
+            }
+        }
+
+        // Source priority (newest first)
+        var priority = ['thunders_edge', 'codex4', 'codex3', 'pok', 'ds'];
+
+        // Respect feature flags
+        function allowed(src) {
+            console.log(dataSources.thunders_edge);
+            if (src === 'thunders_edge') return dataSources.thunders_edge;
+            if (src === 'codex3' || src === 'codex4') return dataSources.keleres;
+            if (src === 'ds') return dataSources.discordantStars;
+            if (src === 'pok') return true; // fallback always allowed
+            return false;
+        }
+
+        // Choose first matching source by priority
+        for (var p = 0; p < priority.length; p++) {
+            var src = priority[p];
+            if (!allowed(src)) continue;
+            for (var j = 0; j < sameType.length; j++) {
+                if (sameType[j].source === src) return sameType[j];
+            }
+        }
+
+
+        // If nothing passes flags, return any available (or null)
+        return sameType.length ? sameType[0] : null;
+    }
+    var chosenFlagship = pickLatestUnit(unitData || [], 'flagship', selectedFaction, dataSources, normalizeFactionAlias);
+    var chosenMech     = pickLatestUnit(unitData || [], 'mech',      selectedFaction, dataSources, normalizeFactionAlias);
+
+    function synergyToTypeString(synergy) {
+        var map = { PROPULSION:'B', WARFARE:'R', CYBERNETIC:'Y', BIOTIC:'G' };
+        synergy = Array.isArray(synergy) ? synergy : [];
+        var out = '';
+        for (var i = 0; i < synergy.length; i++) {
+            out += map[synergy[i]] || '';
+        }
+        return out;
+    }
+    // Find extras for this faction (once)
+    var factionExtraComponents = (extraComponents || []).find(function (c) {
+        return c && c.alias === (selectedFaction && selectedFaction.alias);
+    });
+// true only if there are components to show
+    var hasExtra = !!(factionExtraComponents && Array.isArray(factionExtraComponents.components) && factionExtraComponents.components.length);
 
 
     // Add a loading state until faction data is fetched
@@ -633,20 +718,57 @@ function FactionDetails({ match , dataDir}) {
                             </>
                         );
                     })()}
+                    {dataSources && dataSources.thunders_edge ? (
+                        <div>
+                            <ul>
+                                <strong>Breakthrough: </strong>
+                                <ul>
+                                    {(breakthroughData || [])
+                                        .filter(function (bt) {
+                                            // match faction (normalize like you do elsewhere)
+                                            return normalizeFactionAlias(String(bt.faction || '').toLowerCase()) ===
+                                                normalizeFactionAlias(String(selectedFaction.alias || '').toLowerCase());
+                                        })
+                                        .map(function (bt) {
+                                            var title = bt.displayName || bt.name;
+                                            var types = synergyToTypeString(bt.synergy);
+                                            return (
+                                                <li key={bt.alias}>
+                                                    <strong>{title}</strong>
+                                                    {" "}
+                                                    ({renderTechOrUnitImages(types)})
+                                                    <br/>
+                                                    {/* Bold ACTION: like your abilities block */}
+                                                    {bt.text && bt.text.indexOf('ACTION:') === 0 ? (
+                                                        <>
+                                                            <strong>ACTION: </strong>{bt.text.slice(7)}
+                                                        </>
+                                                    ) : (
+                                                        <>{bt.text}</>
+                                                    )}
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </ul>
+                        </div>
+                        ) : null}
                 </div>
             </div>
             <div className="column column-2">
                 <div className="units">
                     <h3>Flagship and Mech</h3>
                     <ul>
-                        {unitData
-                            .filter(unit => normalizeFactionAlias(unit.faction?.toLowerCase()) === normalizeFactionAlias(selectedFaction.alias?.toLowerCase()) &&
-                                (unit.baseType === "flagship" || unit.baseType === "mech"))
-                            .map(unit => (
-                                <li key={unit.id}>
-                                    {formatUnitInfo(unit)}
-                                </li>
-                            ))}
+                        {chosenFlagship ? (
+                            <li key={chosenFlagship.id}>
+                                {formatUnitInfo(chosenFlagship)}
+                            </li>
+                        ) : null}
+                        {chosenMech ? (
+                            <li key={chosenMech.id}>
+                                {formatUnitInfo(chosenMech)}
+                            </li>
+                        ) : null}
                     </ul>
                 </div>
                 <div className="techs">
@@ -660,7 +782,7 @@ function FactionDetails({ match , dataDir}) {
                                 const prerequisiteTech = techData.find(tech => tech.alias === upgradedUnit.requiredTechId);
                                 return (
                                     <>
-                                        <li key={`base-${baseUnit?.id}`}>
+                                    <li key={`base-${baseUnit?.id}`}>
                                             {formatUnitInfo(baseUnit)}
                                         </li>
                                         <li key={`upgrade-${upgradedUnit.id}`}>
@@ -738,33 +860,26 @@ function FactionDetails({ match , dataDir}) {
                         })}
                     </ul>
                 </div>
-                {/* Display extra components if they exist after the leaders */}
-                {(() => {
-                    const factionExtraComponents = extraComponents.find(comp => comp.alias === selectedFaction.alias);
-
-                    // Ensure the correct return behavior and no syntax issues
-                    if (factionExtraComponents) {
-                        return (
-                            <div className="extra">
-                                <h3>{factionExtraComponents.title}</h3>
-                                <ul>
-                                    {factionExtraComponents.components.map((component, index) => (
-                                        <li key={index}>
-                                            <strong>{component.title}</strong>
-                                            <br/>
-                                            {component.text}
-                                            <br/>
-                                            {component.cost && <><strong>Cost: </strong> {component.cost}</>}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        );
-                    }
-                    return null; // Return null if there are no extra components
-                })()}
             </div>
-        </div>
+                {hasExtra ? (
+                    <div className="column column-4">
+                        <div className="extra">
+                            <h3>{factionExtraComponents.title}</h3>
+                            <ul>
+                                {factionExtraComponents.components.map(function (component, idx) {
+                                    return (
+                                        <li key={idx}>
+                                            <strong>{component.title}</strong>
+                                            <br/>{component.text}
+                                            <br/>{component.cost ? (<><strong>Cost: </strong>{component.cost}</>) : null}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                ) : null}
+            </div>
             );
             }
 

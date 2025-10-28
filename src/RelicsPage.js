@@ -3,8 +3,10 @@ import React, {useEffect, useState} from "react";
 function Relics({ dataDir, dataSources, handleDataSourceChange}) {
     const relicSources = [
         'data/relics/codexii.json',
+        'data/relics/codexiv.json',
         'data/relics/pok.json',
         'data/relics/ds.json',
+        'data/relics/te_relics.json',
     ];
     const [data, setData] = useState([]);
 
@@ -69,7 +71,9 @@ function Relics({ dataDir, dataSources, handleDataSourceChange}) {
                 relicCard.source === 'codex1' || relicCard.source === 'pok')) ||
             (dataSources.keleres && relicCard.source === 'codex2') ||
             (dataSources.keleres && relicCard.source === 'codex3') ||
-            (dataSources.discordantStars && relicCard.source === 'ds')
+            (dataSources.keleres && relicCard.source === 'codex4') ||
+            (dataSources.discordantStars && relicCard.source === 'ds') ||
+            (dataSources.thunders_edge && relicCard.source === 'thunders_edge')
         );
         // If the card is not from the selected sources, ignore it
         if (!isFromSelectedSource) return false; // Filter out cards not from the selected sources
