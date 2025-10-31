@@ -1,0 +1,5284 @@
+[
+  {
+    "id": "99omega",
+    "tileId": "m21",
+    "name": "99-Omega",
+    "aliases": [
+      "99-omega",
+      "99omega",
+      "omega99",
+      "o99",
+      "99o"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 0,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "NONE",
+    "cardImagePath": null,
+    "techSpecialties": [
+      "NONUNITSKIP"
+    ],
+    "legendaryAbilityName": "Desolate Outpost",
+    "legendaryAbilityText": "This system is considered to not have any planets. When you exhaust this planet for its technology skip, you may explore a frontier token in this system, if one is present, or place one if not.",
+    "unitPositions": {
+      "unitHolderName": "99omega",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 115
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 150
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 142
+          },
+          {
+            "x": 152,
+            "y": 142
+          },
+          {
+            "x": 170,
+            "y": 142
+          },
+          {
+            "x": 148,
+            "y": 155
+          },
+          {
+            "x": 165,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 72
+          },
+          {
+            "x": 156,
+            "y": 72
+          },
+          {
+            "x": 133,
+            "y": 85
+          },
+          {
+            "x": 150,
+            "y": 85
+          },
+          {
+            "x": 170,
+            "y": 85
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 113
+          },
+          {
+            "x": 120,
+            "y": 113
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 119
+          },
+          {
+            "x": 193,
+            "y": 75
+          },
+          {
+            "x": 200,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "asteroid",
+    "__file": "99omega.json"
+  },
+  {
+    "id": "ako40m",
+    "tileId": "er82",
+    "name": "Ako.4.0.m",
+    "aliases": [
+      "ako40m",
+      "ako.4.0.m"
+    ],
+    "positionInTile": {
+      "x": 135,
+      "y": 130
+    },
+    "resources": 1,
+    "influence": 1,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Gravitational Gambit",
+    "legendaryAbilityText": "At the end of your turn, you may exhaust this card to roll a die. On a result of 1-3 purge each attachment to this planet, and remove all units on this planet from the game board. Otherwise, attach an Improvement card to this planet. Improvement: ATTACH: This planet's resource and influence values are each increased by 1.",
+    "unitPositions": {
+      "unitHolderName": "ako40m",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 94,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 65,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 99,
+            "y": 144
+          },
+          {
+            "x": 116,
+            "y": 144
+          },
+          {
+            "x": 133,
+            "y": 144
+          },
+          {
+            "x": 108,
+            "y": 155
+          },
+          {
+            "x": 126,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 101,
+            "y": 73
+          },
+          {
+            "x": 119,
+            "y": 73
+          },
+          {
+            "x": 94,
+            "y": 86
+          },
+          {
+            "x": 112,
+            "y": 86
+          },
+          {
+            "x": 130,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 113,
+            "y": 114
+          },
+          {
+            "x": 80,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 32,
+            "y": 121
+          },
+          {
+            "x": 156,
+            "y": 75
+          },
+          {
+            "x": 164,
+            "y": 106
+          },
+          {
+            "x": 156,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "Actively being torn apart by a gravity rift. A fact that itself does not deter the brave. Mining operations have remained strong even as the planet is full further towards its doom.",
+    "source": "eronous",
+    "__file": "ako40m.json"
+  },
+  {
+    "id": "alpert",
+    "tileId": "c08",
+    "name": "Alpert",
+    "aliases": [
+      "alpert",
+      "alprt"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 3,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Zazu's Petition",
+    "legendaryAbilityText": "This planet has the PRODUCTION 2 ability as if it were a unit. When you produce ships in this planet's system, reduce their combined cost by 1.",
+    "unitPositions": {
+      "unitHolderName": "alpert",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 147
+          }
+        ],
+        "sd": [
+          {
+            "x": 189,
+            "y": 182
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 174
+          },
+          {
+            "x": 151,
+            "y": 174
+          },
+          {
+            "x": 168,
+            "y": 174
+          },
+          {
+            "x": 143,
+            "y": 185
+          },
+          {
+            "x": 161,
+            "y": 185
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 103
+          },
+          {
+            "x": 154,
+            "y": 103
+          },
+          {
+            "x": 129,
+            "y": 116
+          },
+          {
+            "x": 147,
+            "y": 116
+          },
+          {
+            "x": 165,
+            "y": 116
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 144
+          },
+          {
+            "x": 115,
+            "y": 144
+          }
+        ],
+        "att": [
+          {
+            "x": 72,
+            "y": 136
+          },
+          {
+            "x": 80,
+            "y": 105
+          },
+          {
+            "x": 199,
+            "y": 136
+          },
+          {
+            "x": 191,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "alpert.json"
+  },
+  {
+    "id": "avernus",
+    "name": "Avernus",
+    "aliases": [
+      "avernus",
+      "stargate",
+      "averns",
+      "muaatbt"
+    ],
+    "resources": 2,
+    "influence": 0,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "The Nucleus",
+    "legendaryAbilityText": "ACTION: Exhaust this card to use the Embers of Muaat's **STAR FORGE** faction ability without spending a command token.",
+    "legendaryAbilityFlavourText": "Gashlai energy/matter conversion has many uses.",
+    "planetLayout": {
+      "unitHolderName": "avernus",
+      "resourcesLocation": "BottomRight",
+      "centerPosition": {
+        "x": 90,
+        "y": 67
+      },
+      "planetRadius": 45,
+      "extraIcons": 1
+    },
+    "source": "thunders_edge",
+    "__file": "avernus.json"
+  },
+  {
+    "id": "bozgarbia",
+    "tileId": "sig01",
+    "name": "Bozgarbia",
+    "aliases": [
+      "bozgarbia"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 1,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "The Wasteland",
+    "legendaryAbilityText": "When you explore Bozgarbia, draw 1 card from each planet exploration deck. Choose 1 to resolve, and discard the rest.\nYou may exhaust this card at the end of your turn to explore Bozgarbia",
+    "legendaryAbilityFlavourText": "*Thousands of years of garbage fills once majestic canyons, endlessly strewn over the moon's surface. Who knows what ancient treasure lays amongst the trash?*",
+    "unitPositions": {
+      "unitHolderName": "bozgarbia",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 132,
+            "y": 140
+          }
+        ],
+        "sd": [
+          {
+            "x": 192,
+            "y": 175
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 167
+          },
+          {
+            "x": 154,
+            "y": 167
+          },
+          {
+            "x": 171,
+            "y": 167
+          },
+          {
+            "x": 146,
+            "y": 178
+          },
+          {
+            "x": 164,
+            "y": 178
+          }
+        ],
+        "mf": [
+          {
+            "x": 139,
+            "y": 96
+          },
+          {
+            "x": 157,
+            "y": 96
+          },
+          {
+            "x": 132,
+            "y": 109
+          },
+          {
+            "x": 150,
+            "y": 109
+          },
+          {
+            "x": 168,
+            "y": 109
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 137
+          },
+          {
+            "x": 118,
+            "y": 137
+          }
+        ],
+        "att": [
+          {
+            "x": 75,
+            "y": 129
+          },
+          {
+            "x": 83,
+            "y": 98
+          },
+          {
+            "x": 202,
+            "y": 129
+          },
+          {
+            "x": 194,
+            "y": 98
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "*A solitary moon, which orbits the home of a once-great civilization, and served as the principal repository for its waste material.*",
+    "source": "sigma",
+    "__file": "bozgarbia.json"
+  },
+  {
+    "id": "bunker",
+    "tileId": "m28",
+    "name": "Bunker",
+    "aliases": [
+      "bunker"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Ancient Stronghold",
+    "legendaryAbilityText": "You may place an additional PDS on this planet. Your PDS on this planet have their range increased by 1.",
+    "unitPositions": {
+      "unitHolderName": "bunker",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 115
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 150
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 142
+          },
+          {
+            "x": 152,
+            "y": 142
+          },
+          {
+            "x": 170,
+            "y": 142
+          },
+          {
+            "x": 148,
+            "y": 155
+          },
+          {
+            "x": 165,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 72
+          },
+          {
+            "x": 156,
+            "y": 72
+          },
+          {
+            "x": 133,
+            "y": 85
+          },
+          {
+            "x": 150,
+            "y": 85
+          },
+          {
+            "x": 170,
+            "y": 85
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 113
+          },
+          {
+            "x": 120,
+            "y": 113
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 119
+          },
+          {
+            "x": 193,
+            "y": 75
+          },
+          {
+            "x": 200,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "asteroid",
+    "__file": "bunker.json"
+  },
+  {
+    "id": "cantris",
+    "tileId": "er115",
+    "name": "Cantris",
+    "aliases": [
+      "cantris"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 4,
+    "influence": 4,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "The Starlight Throne",
+    "legendaryAbilityText": "When you gain this card, gain 1 victory point; when you lose this card, lose 1 victory point. You score last during the status phase.",
+    "unitPositions": {
+      "unitHolderName": "cantris",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "Cantris is scarred by the violent invasions of warring galactic factions.",
+    "source": "eronous",
+    "__file": "cantris.json"
+  },
+  {
+    "id": "casibann",
+    "tileId": "er84",
+    "name": "Casibann",
+    "aliases": [
+      "casibann"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 0,
+    "influence": 3,
+    "planetTypes": [
+      "CULTURAL"
+    ],
+    "legendaryAbilityName": "Sacrifice",
+    "legendaryAbilityText": "When you exhaust Casibann to spend its resources or influence, you may exhaust this card to remove any number of infantry on that planet to spend them as resources or influence as well.",
+    "unitPositions": {
+      "unitHolderName": "casibann",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "A technologically backwards planet that is known for its unique religion. Its isolated populace worships starfaring vessels and their crew like gods.",
+    "source": "eronous",
+    "__file": "casibann.json"
+  },
+  {
+    "id": "cerberus",
+    "tileId": "er109",
+    "name": "Cerberus",
+    "aliases": [
+      "cerberus"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 3,
+    "influence": 1,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Desperation",
+    "legendaryAbilityText": "At the start of a ground combat on a planet you control, you may exhaust this card to choose 1 ground force in the active system; that ground force rolls 1 additional die during each round of that ground combat.",
+    "unitPositions": {
+      "unitHolderName": "cerberus",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "eronous",
+    "__file": "cerberus.json"
+  },
+  {
+    "id": "custodiavigilia",
+    "tileId": null,
+    "name": "Custodia Vigilia",
+    "shortName": "Cust. Vigilia",
+    "shrinkNamePNAttach": true,
+    "aliases": [
+      "custodia vigilia",
+      "custodia",
+      "vigilia",
+      "cust",
+      "cv",
+      "custodiavigilia"
+    ],
+    "positionInTile": null,
+    "resources": 2,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "FACTION",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Custodian's Favour",
+    "legendaryAbilityText": "While you control Mecatol Rex, it gains SPACE CANNON 5 and PRODUCTION 3.\nGain 2 command tokens when another player scores a victory point with the second clause of the 'Imperial' strategy card.",
+    "unitPositions": null,
+    "spaceCannonDieCount": 1,
+    "spaceCannonHitsOn": 5,
+    "flavourText": "*Custodia Vigilia. The fully realized seat of the Keleres. A veritable fortress in the heart of Mecatol City. Ten thousand people come and go daily, and the Keleres see them all.*",
+    "source": "codex3",
+    "__file": "custodiavigilia.json"
+  },
+  {
+    "id": "custodiavigiliaplus",
+    "tileId": null,
+    "name": "Custodia Vigilia (Plus)",
+    "shortName": "Cust. Vigilia",
+    "shrinkNamePNAttach": true,
+    "aliases": [
+      "custodiavigiliaplus",
+      "custodiavigilia(plus)",
+      "custodia vigilia",
+      "custodia",
+      "vigilia",
+      "cust",
+      "cv"
+    ],
+    "positionInTile": null,
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "FACTION",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Custodian's Favour",
+    "legendaryAbilityText": "While you control Mecatol Rex, it gains SPACE CANNON 5 and PRODUCTION 3.\nGain 2 command tokens when another player scores a victory point with the second clause of the 'Imperial' strategy card.",
+    "unitPositions": null,
+    "spaceCannonDieCount": 1,
+    "spaceCannonHitsOn": 5,
+    "source": "keleresplus",
+    "__file": "custodiavigiliaplus.json"
+  },
+  {
+    "id": "desmond",
+    "tileId": "c07",
+    "name": "Desmond",
+    "aliases": [
+      "desmond",
+      "desmnd",
+      "demsond"
+    ],
+    "positionInTile": {
+      "x": 190,
+      "y": 170
+    },
+    "resources": 0,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "ACTION: Purge this card to draw 1 relic. Other players may draw 1 action card",
+    "unitPositions": {
+      "unitHolderName": "desmond",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 151,
+            "y": 160
+          }
+        ],
+        "sd": [
+          {
+            "x": 211,
+            "y": 195
+          }
+        ],
+        "pd": [
+          {
+            "x": 156,
+            "y": 187
+          },
+          {
+            "x": 173,
+            "y": 187
+          },
+          {
+            "x": 190,
+            "y": 187
+          },
+          {
+            "x": 165,
+            "y": 198
+          },
+          {
+            "x": 183,
+            "y": 198
+          }
+        ],
+        "mf": [
+          {
+            "x": 158,
+            "y": 116
+          },
+          {
+            "x": 176,
+            "y": 116
+          },
+          {
+            "x": 151,
+            "y": 129
+          },
+          {
+            "x": 169,
+            "y": 129
+          },
+          {
+            "x": 187,
+            "y": 129
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 170,
+            "y": 157
+          },
+          {
+            "x": 137,
+            "y": 157
+          }
+        ],
+        "att": [
+          {
+            "x": 94,
+            "y": 149
+          },
+          {
+            "x": 102,
+            "y": 118
+          },
+          {
+            "x": 221,
+            "y": 149
+          },
+          {
+            "x": 213,
+            "y": 118
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "desmond.json"
+  },
+  {
+    "id": "domna",
+    "tileId": "d104",
+    "name": "Domna",
+    "aliases": [
+      "domna",
+      "dom"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 2,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Fractal Gate",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to remove 1 of your ships from the game board and place that unit in an adjacent system that does not contain another player’s ships. [Note: Place means ignore all anomaly restrictions. Transport is not possible with placing]",
+    "unitPositions": {
+      "unitHolderName": "domna",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "uncharted_space",
+    "__file": "domna.json"
+  },
+  {
+    "id": "echo",
+    "tileId": "d101",
+    "name": "Echo",
+    "aliases": [
+      "echo",
+      "ech"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Bi-Phasic Generators",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place 1 frontier token in a system that does not contain a planet. [Note: only 1 frontier token can be in a system at any time]",
+    "unitPositions": {
+      "unitHolderName": "echo",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "uncharted_space",
+    "__file": "echo.json"
+  },
+  {
+    "id": "eko",
+    "tileId": "c06",
+    "name": "Eko",
+    "aliases": [
+      "eko",
+      "eok"
+    ],
+    "positionInTile": {
+      "x": 205,
+      "y": 120
+    },
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "eko",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 167,
+            "y": 108
+          }
+        ],
+        "sd": [
+          {
+            "x": 138,
+            "y": 143
+          }
+        ],
+        "pd": [
+          {
+            "x": 172,
+            "y": 135
+          },
+          {
+            "x": 189,
+            "y": 135
+          },
+          {
+            "x": 206,
+            "y": 135
+          },
+          {
+            "x": 181,
+            "y": 146
+          },
+          {
+            "x": 199,
+            "y": 146
+          }
+        ],
+        "mf": [
+          {
+            "x": 174,
+            "y": 64
+          },
+          {
+            "x": 192,
+            "y": 64
+          },
+          {
+            "x": 167,
+            "y": 77
+          },
+          {
+            "x": 185,
+            "y": 77
+          },
+          {
+            "x": 203,
+            "y": 77
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 186,
+            "y": 105
+          },
+          {
+            "x": 153,
+            "y": 105
+          }
+        ],
+        "att": [
+          {
+            "x": 105,
+            "y": 112
+          },
+          {
+            "x": 229,
+            "y": 66
+          },
+          {
+            "x": 237,
+            "y": 97
+          },
+          {
+            "x": 229,
+            "y": 128
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "eko.json"
+  },
+  {
+    "id": "emelpar",
+    "tileId": "99",
+    "name": "Emelpar",
+    "aliases": [
+      "emelpar",
+      "emplar",
+      "sillyspelling"
+    ],
+    "resources": 0,
+    "influence": 2,
+    "planetTypes": [
+      "CULTURAL"
+    ],
+    "legendaryAbilityName": "The Acropolis",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to ready another component that isn't a strategy card.",
+    "legendaryAbilityFlavourText": "Grandeur unrivaled, yet nothing but grandeur remains.",
+    "planetLayout": {
+      "unitHolderName": "emelpar",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      },
+      "extraIcons": 1,
+      "planetRadius": 95
+    },
+    "source": "thunders_edge",
+    "__file": "emelpar.json"
+  },
+  {
+    "id": "ethan",
+    "tileId": "c11",
+    "name": "Ethan",
+    "aliases": [
+      "ethan",
+      "etan",
+      "ethn"
+    ],
+    "positionInTile": {
+      "x": 275,
+      "y": 155
+    },
+    "resources": 6,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "ethan",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 239,
+            "y": 142
+          }
+        ],
+        "sd": [
+          {
+            "x": 210,
+            "y": 177
+          }
+        ],
+        "pd": [
+          {
+            "x": 244,
+            "y": 169
+          },
+          {
+            "x": 261,
+            "y": 169
+          },
+          {
+            "x": 278,
+            "y": 169
+          },
+          {
+            "x": 253,
+            "y": 180
+          },
+          {
+            "x": 271,
+            "y": 180
+          }
+        ],
+        "mf": [
+          {
+            "x": 246,
+            "y": 98
+          },
+          {
+            "x": 264,
+            "y": 98
+          },
+          {
+            "x": 239,
+            "y": 111
+          },
+          {
+            "x": 257,
+            "y": 111
+          },
+          {
+            "x": 275,
+            "y": 111
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 258,
+            "y": 139
+          },
+          {
+            "x": 225,
+            "y": 139
+          }
+        ],
+        "att": [
+          {
+            "x": 309,
+            "y": 131
+          },
+          {
+            "x": 301,
+            "y": 100
+          },
+          {
+            "x": 182,
+            "y": 131
+          },
+          {
+            "x": 190,
+            "y": 100
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "ethan.json"
+  },
+  {
+    "id": "faunus",
+    "tileId": "97",
+    "name": "Faunus",
+    "aliases": [
+      "faunus",
+      "fanus"
+    ],
+    "resources": 1,
+    "influence": 3,
+    "planetTypes": [
+      "INDUSTRIAL"
+    ],
+    "techSpecialties": [
+      "BIOTIC"
+    ],
+    "legendaryAbilityName": "Maxis Central Control",
+    "legendaryAbilityText": "You may exhaust this card when you pass to gain control of a non-home, non-legendary planet that contains no units and has no attachments.",
+    "legendaryAbilityFlavourText": "The Maxis order has agents and scientists embedded in research teams all across the galaxy.",
+    "planetLayout": {
+      "unitHolderName": "faunus",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      },
+      "extraIcons": 2,
+      "planetRadius": 95
+    },
+    "source": "thunders_edge",
+    "__file": "faunus.json"
+  },
+  {
+    "id": "garbozia",
+    "tileId": "98",
+    "name": "Garbozia",
+    "aliases": [
+      "garbozia",
+      "garbage"
+    ],
+    "resources": 2,
+    "influence": 1,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Dok 'N Pic's Salvage Yard",
+    "legendaryAbilityText": "Exhaust this card when you pass to place 1 action card from the discard pile faceup on this card; you can purge cards on this card to play them as if they were in your hand.",
+    "legendaryAbilityFlavourText": "Throw 'er on the 'eap with the rest.",
+    "planetLayout": {
+      "unitHolderName": "garbozia",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      },
+      "extraIcons": 1,
+      "planetRadius": 95
+    },
+    "source": "thunders_edge",
+    "__file": "garbozia.json"
+  },
+  {
+    "id": "ghoti",
+    "tileId": null,
+    "name": "Ghoti",
+    "aliases": [
+      "ghoti"
+    ],
+    "positionInTile": null,
+    "resources": 3,
+    "influence": 3,
+    "factionHomeworld": "ghoti",
+    "planetType": "FACTION",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Money From Nuthin N Fish-Points For Free",
+    "legendaryAbilityText": "When you move 1 or more ships into a system that contains no planets, gain 1 commodity. You may score objectives if your home system contains no planets.",
+    "unitPositions": null,
+    "source": "ds",
+    "__file": "ghoti.json"
+  },
+  {
+    "id": "hersey",
+    "tileId": "er112",
+    "name": "Hersey",
+    "aliases": [
+      "hersey"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 0,
+    "influence": 5,
+    "planetTypes": [
+      "CULTURAL"
+    ],
+    "legendaryAbilityName": "Betrayers' Dagger",
+    "legendaryAbilityText": "Before a player casts votes, you may exhaust this card to choose a player; that player must give you 1 promissory note from their hand, or cast at least 1 vote for the outcome of your choice on that agenda.",
+    "unitPositions": {
+      "unitHolderName": "hersey",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "eronous",
+    "__file": "hersey.json"
+  },
+  {
+    "id": "hexlockedmallice",
+    "tileId": "82ah",
+    "name": "Locked Mallice (Hexagon)",
+    "aliases": [
+      "hexlockedmallice",
+      "hexlocked_mallice",
+      "hexlockednexus",
+      "82ah_1",
+      "hex82a_1",
+      "lockedmallice(hexagon)"
+    ],
+    "positionInTile": {
+      "x": 204,
+      "y": 116
+    },
+    "resources": 0,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Exterrix Headquarters",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to gain 2 trade goods or convert all of your commodities to trade goods.",
+    "unitPositions": {
+      "unitHolderName": "hexlockedmallice",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 162,
+            "y": 104
+          }
+        ],
+        "sd": [
+          {
+            "x": 222,
+            "y": 140
+          }
+        ],
+        "pd": [
+          {
+            "x": 168,
+            "y": 132
+          },
+          {
+            "x": 184,
+            "y": 132
+          },
+          {
+            "x": 202,
+            "y": 132
+          },
+          {
+            "x": 176,
+            "y": 142
+          },
+          {
+            "x": 194,
+            "y": 142
+          }
+        ],
+        "mf": [
+          {
+            "x": 170,
+            "y": 60
+          },
+          {
+            "x": 188,
+            "y": 60
+          },
+          {
+            "x": 162,
+            "y": 74
+          },
+          {
+            "x": 180,
+            "y": 74
+          },
+          {
+            "x": 198,
+            "y": 74
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 182,
+            "y": 102
+          },
+          {
+            "x": 148,
+            "y": 102
+          }
+        ],
+        "att": [
+          {
+            "x": 106,
+            "y": 94
+          },
+          {
+            "x": 114,
+            "y": 62
+          },
+          {
+            "x": 232,
+            "y": 94
+          },
+          {
+            "x": 224,
+            "y": 62
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "dane_leaks",
+    "__file": "hexlockedmallice.json"
+  },
+  {
+    "id": "hexmallice",
+    "tileId": "82bh",
+    "name": "Mallice (Hexagon)",
+    "aliases": [
+      "hexmallice",
+      "hexmellice",
+      "hexmalice",
+      "hexmalis",
+      "hexmallis",
+      "hexmallic",
+      "hexnexus",
+      "82h_1",
+      "82bh_1",
+      "hex82_1",
+      "hex82b_1",
+      "mallice(hexagon)"
+    ],
+    "positionInTile": {
+      "x": 204,
+      "y": 116
+    },
+    "resources": 0,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Exterrix Headquarters",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to gain 2 trade goods or convert all of your commodities to trade goods.",
+    "legendaryAbilityFlavourText": "*Founded by black market traders that fled through a wormhole and ended up in the space between.*",
+    "unitPositions": {
+      "unitHolderName": "hexmallice",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 162,
+            "y": 104
+          }
+        ],
+        "sd": [
+          {
+            "x": 222,
+            "y": 140
+          }
+        ],
+        "pd": [
+          {
+            "x": 168,
+            "y": 132
+          },
+          {
+            "x": 184,
+            "y": 132
+          },
+          {
+            "x": 202,
+            "y": 132
+          },
+          {
+            "x": 176,
+            "y": 142
+          },
+          {
+            "x": 194,
+            "y": 142
+          }
+        ],
+        "mf": [
+          {
+            "x": 170,
+            "y": 60
+          },
+          {
+            "x": 188,
+            "y": 60
+          },
+          {
+            "x": 162,
+            "y": 74
+          },
+          {
+            "x": 180,
+            "y": 74
+          },
+          {
+            "x": 198,
+            "y": 74
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 182,
+            "y": 102
+          },
+          {
+            "x": 148,
+            "y": 102
+          }
+        ],
+        "att": [
+          {
+            "x": 106,
+            "y": 94
+          },
+          {
+            "x": 114,
+            "y": 62
+          },
+          {
+            "x": 232,
+            "y": 94
+          },
+          {
+            "x": 224,
+            "y": 62
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "contrastColor": "orange",
+    "flavourText": "*Trapped in a space believed to be beyond our universe, a shimmering world of strange energies and disconcerting warping of physical laws sitting at the heart of a strategically vital wormhole nexus.*",
+    "source": "dane_leaks",
+    "__file": "hexmallice.json"
+  },
+  {
+    "id": "hopesend",
+    "tileId": "66",
+    "name": "Hope's End",
+    "shrinkNamePNAttach": true,
+    "aliases": [
+      "hopesend",
+      "hope'send",
+      "he",
+      "hopes_end",
+      "hope",
+      "hopes",
+      "hopeend",
+      "hope_end",
+      "hope's end",
+      "66_1",
+      "hope's",
+      "hop's"
+    ],
+    "positionInTile": {
+      "x": 169,
+      "y": 151
+    },
+    "resources": 3,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Imperial Arms Vault",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place 1 mech from your reinforcements on any planet you control or draw 1 action card",
+    "legendaryAbilityFlavourText": "*Buried deep beneath the surface, the lost vaults contain a legion's worth of weapons.*",
+    "unitPositions": {
+      "unitHolderName": "hopesend",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 132,
+            "y": 140
+          }
+        ],
+        "sd": [
+          {
+            "x": 192,
+            "y": 175
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 167
+          },
+          {
+            "x": 154,
+            "y": 167
+          },
+          {
+            "x": 171,
+            "y": 167
+          },
+          {
+            "x": 146,
+            "y": 178
+          },
+          {
+            "x": 164,
+            "y": 178
+          }
+        ],
+        "mf": [
+          {
+            "x": 139,
+            "y": 96
+          },
+          {
+            "x": 157,
+            "y": 96
+          },
+          {
+            "x": 132,
+            "y": 109
+          },
+          {
+            "x": 150,
+            "y": 109
+          },
+          {
+            "x": 168,
+            "y": 109
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 137
+          },
+          {
+            "x": 118,
+            "y": 137
+          }
+        ],
+        "att": [
+          {
+            "x": 75,
+            "y": 129
+          },
+          {
+            "x": 83,
+            "y": 98
+          },
+          {
+            "x": 202,
+            "y": 129
+          },
+          {
+            "x": 194,
+            "y": 98
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "*Buried in the Ichal Nebula. The Lazax used the toxic wildlife and fierce aurora storms to train their troops. Even now, volatile weapon caches remain hidden beneath its sands.*",
+    "source": "pok",
+    "__file": "hopesend.json"
+  },
+  {
+    "id": "horace",
+    "tileId": "c05",
+    "name": "Horace",
+    "aliases": [
+      "horace",
+      "whorace",
+      "whoreass"
+    ],
+    "positionInTile": {
+      "x": 120,
+      "y": 120
+    },
+    "resources": 2,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "horace",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 82,
+            "y": 108
+          }
+        ],
+        "sd": [
+          {
+            "x": 53,
+            "y": 143
+          }
+        ],
+        "pd": [
+          {
+            "x": 87,
+            "y": 135
+          },
+          {
+            "x": 104,
+            "y": 135
+          },
+          {
+            "x": 121,
+            "y": 135
+          },
+          {
+            "x": 96,
+            "y": 146
+          },
+          {
+            "x": 114,
+            "y": 146
+          }
+        ],
+        "mf": [
+          {
+            "x": 89,
+            "y": 64
+          },
+          {
+            "x": 107,
+            "y": 64
+          },
+          {
+            "x": 82,
+            "y": 77
+          },
+          {
+            "x": 100,
+            "y": 77
+          },
+          {
+            "x": 118,
+            "y": 77
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 101,
+            "y": 105
+          },
+          {
+            "x": 68,
+            "y": 105
+          }
+        ],
+        "att": [
+          {
+            "x": 20,
+            "y": 112
+          },
+          {
+            "x": 144,
+            "y": 66
+          },
+          {
+            "x": 152,
+            "y": 97
+          },
+          {
+            "x": 144,
+            "y": 128
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "horace.json"
+  },
+  {
+    "id": "illusion",
+    "tileId": null,
+    "name": "Illusion",
+    "aliases": [
+      "illusion"
+    ],
+    "positionInTile": null,
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Illusion Flight Academy",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place up to 2 fighters from your reinforcements in any system that contains 1 or more of your ships",
+    "legendaryAbilityFlavourText": "*Unsurprisingly, the triple-ace instructors emphasize strike-and-fade tactics and misdirection.*",
+    "planetLayout": {
+      "unitHolderName": "mirage",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 70,
+        "y": 55
+      }
+    },
+    "contrastColor": "blue",
+    "flavourText": "*Exists on no known charts and appears deserted to those who stumble across it. However, secretive locals live in cloaked cities heavily defended by swarms of starfighters.*",
+    "source": "pok",
+    "__file": "illusion.json"
+  },
+  {
+    "id": "industrex",
+    "tileId": "115",
+    "name": "Industrex",
+    "aliases": [
+      "industrex"
+    ],
+    "resources": 2,
+    "influence": 0,
+    "planetTypes": [
+      "INDUSTRIAL"
+    ],
+    "techSpecialties": [
+      "WARFARE"
+    ],
+    "legendaryAbilityName": "Aurex Mechanica",
+    "legendaryAbilityText": "You may exhaust this card when you pass to place 1 ship that matches a unit upgrade technology you own from your reinforcements into a system that contains your ships.",
+    "legendaryAbilityFlavourText": "The Mechanica have refined their prototyping facilities for generations.",
+    "planetLayout": {
+      "unitHolderName": "industrex",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      }
+    },
+    "source": "thunders_edge",
+    "__file": "industrex.json"
+  },
+  {
+    "id": "jarrah",
+    "tileId": "c09",
+    "name": "Jarrah",
+    "aliases": [
+      "jarrah",
+      "jarra",
+      "jara",
+      "jarah"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 1,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "jarrah",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 147
+          }
+        ],
+        "sd": [
+          {
+            "x": 189,
+            "y": 182
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 174
+          },
+          {
+            "x": 151,
+            "y": 174
+          },
+          {
+            "x": 168,
+            "y": 174
+          },
+          {
+            "x": 143,
+            "y": 185
+          },
+          {
+            "x": 161,
+            "y": 185
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 103
+          },
+          {
+            "x": 154,
+            "y": 103
+          },
+          {
+            "x": 129,
+            "y": 116
+          },
+          {
+            "x": 147,
+            "y": 116
+          },
+          {
+            "x": 165,
+            "y": 116
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 144
+          },
+          {
+            "x": 115,
+            "y": 144
+          }
+        ],
+        "att": [
+          {
+            "x": 72,
+            "y": 136
+          },
+          {
+            "x": 80,
+            "y": 105
+          },
+          {
+            "x": 199,
+            "y": 136
+          },
+          {
+            "x": 191,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "jarrah.json"
+  },
+  {
+    "id": "kelgate",
+    "tileId": "er83",
+    "name": "Kelgate",
+    "aliases": [
+      "kelgate"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 1,
+    "influence": 2,
+    "planetTypes": [
+      "INDUSTRIAL"
+    ],
+    "legendaryAbilityName": "Experimental Gate",
+    "legendaryAbilityText": "At the start of your turn, you may exhaust this card to treat this system as if it had an alpha and beta wormhole until the end of this tactical action.",
+    "unitPositions": {
+      "unitHolderName": "kelgate",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "The site of the first non-Cruess wormhole generation device. Powered by the heat from the planet's core. The shifting gates have led to it become an important trade hub.",
+    "source": "eronous",
+    "__file": "kelgate.json"
+  },
+  {
+    "id": "kwon",
+    "tileId": "c10",
+    "name": "Kwon",
+    "aliases": [
+      "kwon",
+      "kown",
+      "know",
+      "wonk"
+    ],
+    "positionInTile": {
+      "x": 130,
+      "y": 215
+    },
+    "resources": 3,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "INTERSTELLAR GATE",
+    "legendaryAbilityText": "When this card enters play, attach to it the unlocked commander of a random unchosen faction. While you control this planet, your commodity value is decreased by 1.",
+    "unitPositions": {
+      "unitHolderName": "kwon",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 91,
+            "y": 203
+          }
+        ],
+        "sd": [
+          {
+            "x": 151,
+            "y": 238
+          }
+        ],
+        "pd": [
+          {
+            "x": 96,
+            "y": 230
+          },
+          {
+            "x": 113,
+            "y": 230
+          },
+          {
+            "x": 130,
+            "y": 230
+          },
+          {
+            "x": 105,
+            "y": 241
+          },
+          {
+            "x": 123,
+            "y": 241
+          }
+        ],
+        "mf": [
+          {
+            "x": 98,
+            "y": 159
+          },
+          {
+            "x": 116,
+            "y": 159
+          },
+          {
+            "x": 91,
+            "y": 172
+          },
+          {
+            "x": 109,
+            "y": 172
+          },
+          {
+            "x": 127,
+            "y": 172
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 110,
+            "y": 200
+          },
+          {
+            "x": 77,
+            "y": 200
+          }
+        ],
+        "att": [
+          {
+            "x": 34,
+            "y": 192
+          },
+          {
+            "x": 42,
+            "y": 161
+          },
+          {
+            "x": 161,
+            "y": 192
+          },
+          {
+            "x": 153,
+            "y": 161
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "kwon.json"
+  },
+  {
+    "id": "lapidus",
+    "tileId": "c04",
+    "name": "Lapidus",
+    "aliases": [
+      "lapidus",
+      "lapids",
+      "lapudis"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 2,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "lapidus",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 137
+          }
+        ],
+        "sd": [
+          {
+            "x": 191,
+            "y": 172
+          }
+        ],
+        "pd": [
+          {
+            "x": 136,
+            "y": 164
+          },
+          {
+            "x": 153,
+            "y": 164
+          },
+          {
+            "x": 170,
+            "y": 164
+          },
+          {
+            "x": 145,
+            "y": 175
+          },
+          {
+            "x": 163,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 93
+          },
+          {
+            "x": 156,
+            "y": 93
+          },
+          {
+            "x": 131,
+            "y": 106
+          },
+          {
+            "x": 149,
+            "y": 106
+          },
+          {
+            "x": 167,
+            "y": 106
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 150,
+            "y": 134
+          },
+          {
+            "x": 117,
+            "y": 134
+          }
+        ],
+        "att": [
+          {
+            "x": 74,
+            "y": 126
+          },
+          {
+            "x": 82,
+            "y": 95
+          },
+          {
+            "x": 201,
+            "y": 126
+          },
+          {
+            "x": 193,
+            "y": 95
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "lapidus.json"
+  },
+  {
+    "id": "limbo",
+    "tileId": "er107",
+    "name": "Limbo",
+    "aliases": [
+      "limbo"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 0,
+    "influence": 2,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Equilibrium",
+    "legendaryAbilityText": "When a player would win a combat, you may exhaust this card to treat that combat as a draw instead",
+    "unitPositions": {
+      "unitHolderName": "limbo",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "eronous",
+    "__file": "limbo.json"
+  },
+  {
+    "id": "lloyd",
+    "tileId": "c03",
+    "name": "Lloyd",
+    "aliases": [
+      "lloyd",
+      "loyd"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 0,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "lloyd",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 147
+          }
+        ],
+        "sd": [
+          {
+            "x": 189,
+            "y": 182
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 174
+          },
+          {
+            "x": 151,
+            "y": 174
+          },
+          {
+            "x": 168,
+            "y": 174
+          },
+          {
+            "x": 143,
+            "y": 185
+          },
+          {
+            "x": 161,
+            "y": 185
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 103
+          },
+          {
+            "x": 154,
+            "y": 103
+          },
+          {
+            "x": 129,
+            "y": 116
+          },
+          {
+            "x": 147,
+            "y": 116
+          },
+          {
+            "x": 165,
+            "y": 116
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 144
+          },
+          {
+            "x": 115,
+            "y": 144
+          }
+        ],
+        "att": [
+          {
+            "x": 72,
+            "y": 136
+          },
+          {
+            "x": 80,
+            "y": 105
+          },
+          {
+            "x": 199,
+            "y": 136
+          },
+          {
+            "x": 191,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "lloyd.json"
+  },
+  {
+    "id": "lockedmallice",
+    "tileId": "82a",
+    "name": "Locked Mallice",
+    "aliases": [
+      "lockedmallice",
+      "locked_mallice"
+    ],
+    "positionInTile": {
+      "x": 236,
+      "y": 156
+    },
+    "resources": 0,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Exterrix Headquarters",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to gain 2 trade goods or convert all of your commodities to trade goods.",
+    "unitPositions": {
+      "unitHolderName": "lockedmallice",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 198,
+            "y": 148
+          }
+        ],
+        "sd": [
+          {
+            "x": 258,
+            "y": 183
+          }
+        ],
+        "pd": [
+          {
+            "x": 203,
+            "y": 175
+          },
+          {
+            "x": 220,
+            "y": 175
+          },
+          {
+            "x": 237,
+            "y": 175
+          },
+          {
+            "x": 212,
+            "y": 186
+          },
+          {
+            "x": 230,
+            "y": 186
+          }
+        ],
+        "mf": [
+          {
+            "x": 205,
+            "y": 104
+          },
+          {
+            "x": 223,
+            "y": 104
+          },
+          {
+            "x": 198,
+            "y": 117
+          },
+          {
+            "x": 216,
+            "y": 117
+          },
+          {
+            "x": 234,
+            "y": 117
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 217,
+            "y": 145
+          },
+          {
+            "x": 184,
+            "y": 145
+          }
+        ],
+        "att": [
+          {
+            "x": 141,
+            "y": 137
+          },
+          {
+            "x": 149,
+            "y": 106
+          },
+          {
+            "x": 268,
+            "y": 137
+          },
+          {
+            "x": 260,
+            "y": 106
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "pok",
+    "__file": "lockedmallice.json"
+  },
+  {
+    "id": "lust",
+    "tileId": "er108",
+    "name": "Lust",
+    "aliases": [
+      "lust"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Vigorous Winds",
+    "legendaryAbilityText": "After you activate a system, you may exhaust this card to apply +1 to the movement value of up to 2 of your ships during this tactical action.",
+    "legendaryAbilityFlavourText": null,
+    "flavourText": "Its barren surface has been worn smooth by constant storms. Ships have long been able to take advantage of these forces and have used them to great avail.",
+    "unitPositions": {
+      "unitHolderName": "lust",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "spaceCannonDieCount": 0,
+    "spaceCannonHitsOn": 0,
+    "searchTags": [],
+    "source": "eronous",
+    "__file": "lust.json"
+  },
+  {
+    "id": "magrathea",
+    "tileId": "sig03",
+    "name": "Magrathea",
+    "aliases": [
+      "magrathea"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 0,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Asymptotic Enrichment",
+    "legendaryAbilityText": "The resource and influence value of Magrathea are each equal to the combined total victory points on face up public objectives.",
+    "legendaryAbilityFlavourText": "*The Magratheans are expert terraformers, with their homeworld being the crown jewel of their abilities. Rumors have started that they plan on building a planet from scratch in the near future.*",
+    "unitPositions": {
+      "unitHolderName": "magrathea",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 132,
+            "y": 140
+          }
+        ],
+        "sd": [
+          {
+            "x": 192,
+            "y": 175
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 167
+          },
+          {
+            "x": 154,
+            "y": 167
+          },
+          {
+            "x": 171,
+            "y": 167
+          },
+          {
+            "x": 146,
+            "y": 178
+          },
+          {
+            "x": 164,
+            "y": 178
+          }
+        ],
+        "mf": [
+          {
+            "x": 139,
+            "y": 96
+          },
+          {
+            "x": 157,
+            "y": 96
+          },
+          {
+            "x": 132,
+            "y": 109
+          },
+          {
+            "x": 150,
+            "y": 109
+          },
+          {
+            "x": 168,
+            "y": 109
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 137
+          },
+          {
+            "x": 118,
+            "y": 137
+          }
+        ],
+        "att": [
+          {
+            "x": 75,
+            "y": 129
+          },
+          {
+            "x": 83,
+            "y": 98
+          },
+          {
+            "x": 202,
+            "y": 129
+          },
+          {
+            "x": 194,
+            "y": 98
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "*Located in the heart of the Horsehead Nebula, the planet looks a lot different from when it was last seen by the wider universe at the end of the Age of Dusk.*",
+    "source": "sigma",
+    "__file": "magrathea.json"
+  },
+  {
+    "id": "malbolge",
+    "tileId": "er114",
+    "name": "Malbolge",
+    "aliases": [
+      "malbolge"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 1,
+    "influence": 3,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Hand of Force",
+    "legendaryAbilityText": "At the start of your turn, you may exhaust this card to choose 1 of your neighbors; that player must give you 1 promissory note or 1 action card from their hand, if able.",
+    "unitPositions": {
+      "unitHolderName": "malbolge",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "Boiling swamps cover the surface. Well hidden tunnels lead to fortifed bunkers. Sealed deep within are vast libraries, any record can be found stored within their info-matrices.",
+    "source": "eronous",
+    "__file": "malbolge.json"
+  },
+  {
+    "id": "mallice",
+    "tileId": "82b",
+    "name": "Mallice",
+    "aliases": [
+      "mallice",
+      "mellice",
+      "malice",
+      "malis",
+      "mallis",
+      "mallic",
+      "nexus",
+      "82_1",
+      "82b_1"
+    ],
+    "positionInTile": {
+      "x": 236,
+      "y": 156
+    },
+    "resources": 0,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Exterrix Headquarters",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to gain 2 trade goods or convert all of your commodities to trade goods.",
+    "legendaryAbilityFlavourText": "*Founded by black market traders that fled through a wormhole and ended up in the space between.*",
+    "unitPositions": {
+      "unitHolderName": "mallice",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 198,
+            "y": 148
+          }
+        ],
+        "sd": [
+          {
+            "x": 258,
+            "y": 183
+          }
+        ],
+        "pd": [
+          {
+            "x": 203,
+            "y": 175
+          },
+          {
+            "x": 220,
+            "y": 175
+          },
+          {
+            "x": 237,
+            "y": 175
+          },
+          {
+            "x": 212,
+            "y": 186
+          },
+          {
+            "x": 230,
+            "y": 186
+          }
+        ],
+        "mf": [
+          {
+            "x": 205,
+            "y": 104
+          },
+          {
+            "x": 223,
+            "y": 104
+          },
+          {
+            "x": 198,
+            "y": 117
+          },
+          {
+            "x": 216,
+            "y": 117
+          },
+          {
+            "x": 234,
+            "y": 117
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 217,
+            "y": 145
+          },
+          {
+            "x": 184,
+            "y": 145
+          }
+        ],
+        "att": [
+          {
+            "x": 141,
+            "y": 137
+          },
+          {
+            "x": 149,
+            "y": 106
+          },
+          {
+            "x": 268,
+            "y": 137
+          },
+          {
+            "x": 260,
+            "y": 106
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "contrastColor": "orange",
+    "flavourText": "*Trapped in a space believed to be beyond our universe, a shimmering world of strange energies and disconcerting warping of physical laws sitting at the heart of a strategically vital wormhole nexus.*",
+    "source": "pok",
+    "__file": "mallice.json"
+  },
+  {
+    "id": "mirage",
+    "tileId": null,
+    "name": "Mirage",
+    "aliases": [
+      "mirage",
+      "mirag",
+      "miraj",
+      "miraje",
+      "mrag"
+    ],
+    "positionInTile": null,
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Mirage Flight Academy",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place up to 2 fighters from your reinforcements in any system that contains 1 or more of your ships",
+    "legendaryAbilityFlavourText": "*Unsurprisingly, the triple-ace instructors emphasize strike-and-fade tactics and misdirection.*",
+    "planetLayout": {
+      "unitHolderName": "mirage",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 70,
+        "y": 55
+      }
+    },
+    "contrastColor": "orange",
+    "flavourText": "*Exists on no known charts and appears deserted to those who stumble across it. However, secretive locals live in cloaked cities heavily defended by swarms of starfighters.*",
+    "source": "pok",
+    "__file": "mirage.json"
+  },
+  {
+    "id": "mrte",
+    "tileId": "112",
+    "name": "Mecatol Rex",
+    "shortNamePNAttach": "Mecatol R.",
+    "aliases": [
+      "mecatolrexte",
+      "mrte",
+      "mr2"
+    ],
+    "resources": 1,
+    "influence": 6,
+    "planetTypes": [
+      "MR"
+    ],
+    "legendaryAbilityName": "The Galactic Council",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn and discard 1 secret objective to draw 1 secret objective.",
+    "legendaryAbilityFlavourText": "Hic fiat opus galaxiae.",
+    "planetLayout": {
+      "unitHolderName": "mrte",
+      "resourcesLocation": "BottomLeft",
+      "extraIcons": 1,
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      },
+      "planetRadius": 120
+    },
+    "flavourText": "*Once a splendid place, now a sad devasted wasteland. Only the radiation-shielded Mecatol city, the seat of the powerful Galactic Council, remains habitable.*",
+    "source": "thunders_edge",
+    "__file": "mrte.json"
+  },
+  {
+    "id": "nevermore",
+    "tileId": null,
+    "name": "Nevermore",
+    "aliases": [
+      "nevermore"
+    ],
+    "positionInTile": null,
+    "resources": 2,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "NONE",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Consortium's Resolve",
+    "legendaryAbilityText": "When another player activates a system adjacent to Mecatol Rex, gain 1 trade good.\nGain 2 command tokens when another player draws a secret objective with the second clause of the 'Imperial' strategy card.",
+    "unitPositions": null,
+    "source": "keleresplus",
+    "__file": "nevermore.json"
+  },
+  {
+    "id": "oasis",
+    "tileId": null,
+    "name": "Oasis",
+    "aliases": [
+      "oasis"
+    ],
+    "positionInTile": null,
+    "resources": 2,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "HAZARDOUS",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Unlikely Return",
+    "legendaryAbilityText": "At the end of your turn, you may place a destroyer from your reinforcements in a system that contains no planets and no other player's ships.",
+    "legendaryAbilityFlavourText": "*It is legend that deep within space, an oasis serves as a beacon of hope to lost ships.*",
+    "planetLayout": {
+      "unitHolderName": "oasis",
+      "resourcesLocation": "BottomRight",
+      "centerPosition": {
+        "x": 87,
+        "y": 55
+      }
+    },
+    "contrastColor": "blue",
+    "flavourText": "*This rogue planet has eluded documentation for millennia. Its few reports have come from the lost crews that have claimed to have stumbled upon it. No expedition has ever been able to confirm its existence.*",
+    "source": "ascendant_sun",
+    "__file": "oasis.json"
+  },
+  {
+    "id": "ordinian",
+    "tileId": "92",
+    "name": "Ordinian",
+    "aliases": [
+      "ordinian"
+    ],
+    "resources": 0,
+    "influence": 0,
+    "factionHomeworld": "bastion",
+    "planetTypes": [
+      "FACTION"
+    ],
+    "legendaryAbilityName": "4X41D \"Hyperion\" V1",
+    "legendaryAbilityText": "You may exhaust this card when you pass to draw 1 action card and gain 1 command token.",
+    "legendaryAbilityFlavourText": "A shard of a greater whole, a part of a grand effort.",
+    "planetLayout": {
+      "unitHolderName": "ordinian",
+      "resourcesLocation": "TopLeft",
+      "centerPosition": {
+        "x": 135,
+        "y": 85
+      }
+    },
+    "source": "thunders_edge",
+    "__file": "ordinian.json"
+  },
+  {
+    "id": "ordinianc4",
+    "tileId": "c41",
+    "name": "Ordinian",
+    "shortNamePNAttach": "Ordinian",
+    "shrinkNamePNAttach": true,
+    "aliases": [
+      "ordinianc4"
+    ],
+    "positionInTile": {
+      "x": 171,
+      "y": 149
+    },
+    "resources": 0,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "MR",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Barren Husk",
+    "legendaryAbilityText": "You may exhaust this card when you pass to draw 1 action card and gain 1 command token",
+    "unitPositions": {
+      "unitHolderName": "ordinianc4",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 143
+          }
+        ],
+        "sd": [
+          {
+            "x": 191,
+            "y": 178
+          }
+        ],
+        "pd": [
+          {
+            "x": 136,
+            "y": 170
+          },
+          {
+            "x": 153,
+            "y": 170
+          },
+          {
+            "x": 170,
+            "y": 170
+          },
+          {
+            "x": 145,
+            "y": 181
+          },
+          {
+            "x": 163,
+            "y": 181
+          }
+        ],
+        "mf": [
+          {
+            "x": 128,
+            "y": 99
+          },
+          {
+            "x": 146,
+            "y": 99
+          },
+          {
+            "x": 164,
+            "y": 99
+          },
+          {
+            "x": 121,
+            "y": 112
+          },
+          {
+            "x": 139,
+            "y": 112
+          },
+          {
+            "x": 157,
+            "y": 112
+          },
+          {
+            "x": 175,
+            "y": 112
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 150,
+            "y": 140
+          },
+          {
+            "x": 117,
+            "y": 140
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "The Nekro Virus did something here once. Idk nobody cares about flavor text.",
+    "source": "base",
+    "__file": "ordinianc4.json"
+  },
+  {
+    "id": "origin",
+    "tileId": "m17",
+    "name": "Origin",
+    "aliases": [
+      "origin",
+      "m17"
+    ],
+    "positionInTile": {
+      "x": 160,
+      "y": 160
+    },
+    "resources": 0,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Desecrator",
+    "legendaryAbilityText": "When you gain control of Origin, attach this card to a planet in your home system. That planet has +2 influence.",
+    "unitPositions": {
+      "unitHolderName": "origin",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 121,
+            "y": 145
+          }
+        ],
+        "sd": [
+          {
+            "x": 90,
+            "y": 180
+          }
+        ],
+        "pd": [
+          {
+            "x": 127,
+            "y": 172
+          },
+          {
+            "x": 142,
+            "y": 172
+          },
+          {
+            "x": 160,
+            "y": 172
+          },
+          {
+            "x": 138,
+            "y": 185
+          },
+          {
+            "x": 155,
+            "y": 185
+          }
+        ],
+        "mf": [
+          {
+            "x": 128,
+            "y": 102
+          },
+          {
+            "x": 146,
+            "y": 102
+          },
+          {
+            "x": 123,
+            "y": 115
+          },
+          {
+            "x": 140,
+            "y": 115
+          },
+          {
+            "x": 160,
+            "y": 115
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 141,
+            "y": 143
+          },
+          {
+            "x": 110,
+            "y": 143
+          }
+        ],
+        "att": [
+          {
+            "x": 61,
+            "y": 149
+          },
+          {
+            "x": 183,
+            "y": 105
+          },
+          {
+            "x": 190,
+            "y": 135
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "asteroid",
+    "__file": "origin.json"
+  },
+  {
+    "id": "phantasm",
+    "tileId": null,
+    "name": "Phantasm",
+    "aliases": [
+      "phantasm"
+    ],
+    "positionInTile": null,
+    "resources": 1,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Phantasm Flight Academy",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place up to 2 fighters from your reinforcements in any system that contains 1 or more of your ships",
+    "legendaryAbilityFlavourText": "*Unsurprisingly, the triple-ace instructors emphasize strike-and-fade tactics and misdirection.*",
+    "planetLayout": {
+      "unitHolderName": "mirage",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 70,
+        "y": 55
+      }
+    },
+    "contrastColor": "blue",
+    "flavourText": "*Exists on no known charts and appears deserted to those who stumble across it. However, secretive locals live in cloaked cities heavily defended by swarms of starfighters.*",
+    "source": "pok",
+    "__file": "phantasm.json"
+  },
+  {
+    "id": "plutus",
+    "tileId": "er110",
+    "name": "Plutus",
+    "aliases": [
+      "plutus"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 1,
+    "influence": 0,
+    "planetTypes": [
+      "INDUSTRIAL"
+    ],
+    "legendaryAbilityName": "Curse of Wealth",
+    "legendaryAbilityText": "At the start of the Strategy phase, you may exhaust this card and any number of planets you control to place a number of trade goods on this card equal to either the combined resource or influence value of those planets. When you ready this card, gain all trade goods on this card.",
+    "unitPositions": {
+      "unitHolderName": "plutus",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "eronous",
+    "__file": "plutus.json"
+  },
+  {
+    "id": "primor",
+    "tileId": "65",
+    "name": "Primor",
+    "aliases": [
+      "primor",
+      "prmr",
+      "primr",
+      "prmor",
+      "prim",
+      "65_1"
+    ],
+    "positionInTile": {
+      "x": 172,
+      "y": 148
+    },
+    "resources": 2,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "The Atrament",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place up to 2 infantry from your reinforcements on any planet you control",
+    "legendaryAbilityFlavourText": "*A clade of assassin-scholars has watched over Primor, pledged to its populace's survival.*",
+    "unitPositions": {
+      "unitHolderName": "primor",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 140
+          }
+        ],
+        "sd": [
+          {
+            "x": 191,
+            "y": 175
+          }
+        ],
+        "pd": [
+          {
+            "x": 136,
+            "y": 167
+          },
+          {
+            "x": 153,
+            "y": 167
+          },
+          {
+            "x": 170,
+            "y": 167
+          },
+          {
+            "x": 145,
+            "y": 178
+          },
+          {
+            "x": 163,
+            "y": 178
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 96
+          },
+          {
+            "x": 156,
+            "y": 96
+          },
+          {
+            "x": 131,
+            "y": 109
+          },
+          {
+            "x": 149,
+            "y": 109
+          },
+          {
+            "x": 167,
+            "y": 109
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 150,
+            "y": 137
+          },
+          {
+            "x": 117,
+            "y": 137
+          }
+        ],
+        "att": [
+          {
+            "x": 74,
+            "y": 129
+          },
+          {
+            "x": 82,
+            "y": 98
+          },
+          {
+            "x": 201,
+            "y": 129
+          },
+          {
+            "x": 193,
+            "y": 98
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "*Large temperate world. Site of several pitched battles during the Twilight Wars due to valuable osmium deposits and a well- educated populace.*",
+    "source": "pok",
+    "__file": "primor.json"
+  },
+  {
+    "id": "prism",
+    "tileId": "d103",
+    "name": "Prism",
+    "aliases": [
+      "prism",
+      "pris"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 0,
+    "influence": 3,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Mystic Library",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn and purge a non-faction, non-unit upgrade technology you own to gain 1 technology with the same number of prerequisites.",
+    "unitPositions": {
+      "unitHolderName": "prism",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "uncharted_space",
+    "__file": "prism.json"
+  },
+  {
+    "id": "silence",
+    "tileId": "d100",
+    "name": "Silence",
+    "aliases": [
+      "silence"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 2,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Imperial Salvage Yard",
+    "legendaryAbilityText": "You may exhaust this card at the end of your turn to place 1 cruiser from your reinforcements in any system that contains 1 or more of your ships.",
+    "unitPositions": {
+      "unitHolderName": "silence",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "uncharted_space",
+    "__file": "silence.json"
+  },
+  {
+    "id": "stygain",
+    "tileId": "er111",
+    "name": "Stygain",
+    "aliases": [
+      "stygain"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 3,
+    "influence": 0,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "legendaryAbilityName": "Undying Legions",
+    "legendaryAbilityText": "After 1 of your infantry units is destroyed during combat, you may place that unit on this card. When you pass, you may exhaust this card to place each unit on this card on Stygain.",
+    "unitPositions": {
+      "unitHolderName": "stygain",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "flavourText": "Soldiers sometimes claim to recognise fallen comrades in the swirling fog.",
+    "source": "eronous",
+    "__file": "stygain.json"
+  },
+  {
+    "id": "styx",
+    "tileId": "fracture4",
+    "name": "Styx",
+    "aliases": [
+      "stic",
+      "stix",
+      "styx",
+      "sticks"
+    ],
+    "resources": 4,
+    "influence": 0,
+    "planetTypes": [
+      "NONE"
+    ],
+    "legendaryAbilityName": "A Song Like Marrow",
+    "legendaryAbilityText": "When you gain this card, gain 1 victory point. When you lose this card, lose 1 victory point.",
+    "legendaryAbilityFlavourText": "The last memory of the universe before.",
+    "planetLayout": {
+      "unitHolderName": "styx",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      }
+    },
+    "source": "thunders_edge",
+    "__file": "styx.json"
+  },
+  {
+    "id": "tarrock",
+    "tileId": "d102",
+    "name": "Tarrock",
+    "aliases": [
+      "tarrock",
+      "tar",
+      "tarr"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 3,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Council Black Site",
+    "legendaryAbilityText": "After an agenda is revealed, you may exhaust this card to predict aloud an outcome of that agenda. If your prediction is correct, draw 1 secret objective.",
+    "unitPositions": {
+      "unitHolderName": "tarrock",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 131,
+            "y": 135
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 170
+          }
+        ],
+        "pd": [
+          {
+            "x": 137,
+            "y": 162
+          },
+          {
+            "x": 152,
+            "y": 162
+          },
+          {
+            "x": 170,
+            "y": 162
+          },
+          {
+            "x": 148,
+            "y": 175
+          },
+          {
+            "x": 165,
+            "y": 175
+          }
+        ],
+        "mf": [
+          {
+            "x": 138,
+            "y": 92
+          },
+          {
+            "x": 156,
+            "y": 92
+          },
+          {
+            "x": 133,
+            "y": 105
+          },
+          {
+            "x": 150,
+            "y": 105
+          },
+          {
+            "x": 170,
+            "y": 105
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 151,
+            "y": 133
+          },
+          {
+            "x": 120,
+            "y": 133
+          }
+        ],
+        "att": [
+          {
+            "x": 71,
+            "y": 139
+          },
+          {
+            "x": 193,
+            "y": 95
+          },
+          {
+            "x": 200,
+            "y": 125
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "uncharted_space",
+    "__file": "tarrock.json"
+  },
+  {
+    "id": "tchigunn",
+    "tileId": "s02",
+    "name": "Tchi Gunn",
+    "aliases": [
+      "tchigunn",
+      "tchi_gunn",
+      "tchi",
+      "gunn",
+      "chicken"
+    ],
+    "positionInTile": {
+      "x": 212,
+      "y": 213
+    },
+    "resources": 1,
+    "influence": 1,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Neural Overdrive",
+    "legendaryAbilityText": "During status phase you draw an additional action card.",
+    "unitPositions": {
+      "unitHolderName": "tchigunn",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 177,
+            "y": 199
+          }
+        ],
+        "sd": [
+          {
+            "x": 148,
+            "y": 234
+          }
+        ],
+        "pd": [
+          {
+            "x": 182,
+            "y": 226
+          },
+          {
+            "x": 199,
+            "y": 226
+          },
+          {
+            "x": 216,
+            "y": 226
+          },
+          {
+            "x": 191,
+            "y": 237
+          },
+          {
+            "x": 209,
+            "y": 237
+          }
+        ],
+        "mf": [
+          {
+            "x": 184,
+            "y": 155
+          },
+          {
+            "x": 202,
+            "y": 155
+          },
+          {
+            "x": 177,
+            "y": 168
+          },
+          {
+            "x": 195,
+            "y": 168
+          },
+          {
+            "x": 213,
+            "y": 168
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 196,
+            "y": 196
+          },
+          {
+            "x": 163,
+            "y": 196
+          }
+        ],
+        "att": [
+          {
+            "x": 247,
+            "y": 188
+          },
+          {
+            "x": 239,
+            "y": 157
+          },
+          {
+            "x": 120,
+            "y": 188
+          },
+          {
+            "x": 128,
+            "y": 157
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "somno",
+    "__file": "tchigunn.json"
+  },
+  {
+    "id": "tempesta",
+    "tileId": "100",
+    "name": "Tempesta",
+    "aliases": [
+      "tempest",
+      "tempesta"
+    ],
+    "resources": 1,
+    "influence": 1,
+    "planetTypes": [
+      "HAZARDOUS"
+    ],
+    "techSpecialties": [
+      "PROPULSION"
+    ],
+    "legendaryAbilityName": "Ionian Fuel Refinery",
+    "legendaryAbilityText": "You may exhaust this card after you activate a system to apply +1 to the move value of 1 of your ships during this tactical action.",
+    "legendaryAbilityFlavourText": "The exotic matter of the rings is found nowhere else in the galaxy.",
+    "planetLayout": {
+      "unitHolderName": "tempesta",
+      "resourcesLocation": "BottomLeft",
+      "centerPosition": {
+        "x": 170,
+        "y": 150
+      }
+    },
+    "source": "thunders_edge",
+    "__file": "tempesta.json"
+  },
+  {
+    "id": "thigel",
+    "tileId": "s01",
+    "name": "Thigel",
+    "aliases": [
+      "thigel",
+      "thig",
+      "thi"
+    ],
+    "positionInTile": {
+      "x": 135,
+      "y": 95
+    },
+    "resources": 2,
+    "influence": 0,
+    "factionHomeworld": null,
+    "planetType": "INDUSTRIAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Orbital Deep Space Observatory",
+    "legendaryAbilityText": "After you pass, you may place frontier token in up to 2 systems that do not contain a frontier token or a planet.",
+    "legendaryAbilityFlavourText": "The old orbital antenna array was dismissed as derelict space junk by federal agents. Acamar knew better.",
+    "unitPositions": {
+      "unitHolderName": "thigel",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 99,
+            "y": 81
+          }
+        ],
+        "sd": [
+          {
+            "x": 70,
+            "y": 116
+          }
+        ],
+        "pd": [
+          {
+            "x": 104,
+            "y": 108
+          },
+          {
+            "x": 121,
+            "y": 108
+          },
+          {
+            "x": 138,
+            "y": 108
+          },
+          {
+            "x": 113,
+            "y": 119
+          },
+          {
+            "x": 131,
+            "y": 119
+          }
+        ],
+        "mf": [
+          {
+            "x": 106,
+            "y": 37
+          },
+          {
+            "x": 124,
+            "y": 37
+          },
+          {
+            "x": 99,
+            "y": 50
+          },
+          {
+            "x": 117,
+            "y": 50
+          },
+          {
+            "x": 135,
+            "y": 50
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 118,
+            "y": 78
+          },
+          {
+            "x": 85,
+            "y": 78
+          }
+        ],
+        "att": [
+          {
+            "x": 37,
+            "y": 85
+          },
+          {
+            "x": 161,
+            "y": 39
+          },
+          {
+            "x": 169,
+            "y": 70
+          },
+          {
+            "x": 161,
+            "y": 101
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "somno",
+    "__file": "thigel.json"
+  },
+  {
+    "id": "thundersedge",
+    "name": "Thunder's Edge",
+    "shortName": "Thund. Edge",
+    "shrinkNamePNAttach": true,
+    "aliases": [
+      "thunder'sedge",
+      "thundersedge",
+      "thunder",
+      "te"
+    ],
+    "resources": 5,
+    "influence": 1,
+    "planetTypes": [
+      "NONE"
+    ],
+    "legendaryAbilityName": "Jupiter Brain",
+    "legendaryAbilityText": "Gain your breakthrough when you gain this card if you do not already have it. You may exhaust this card at the end of your turn to perform another action.",
+    "legendaryAbilityFlavourText": "Heirarch online. State your request.",
+    "planetLayout": {
+      "unitHolderName": "thundersedge",
+      "resourcesLocation": "BottomLeft",
+      "extraIcons": 1,
+      "centerPosition": {
+        "x": 62,
+        "y": 60
+      },
+      "planetRadius": 30
+    },
+    "source": "thunders_edge",
+    "__file": "thundersedge.json"
+  },
+  {
+    "id": "uikos",
+    "tileId": "br1",
+    "name": "Uikos",
+    "aliases": [
+      "uikos",
+      "uiko",
+      "uik"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 128
+    },
+    "resources": 1,
+    "influence": 1,
+    "factionHomeworld": "uydai",
+    "planetType": "FACTION",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "Harvest",
+    "legendaryAbilityText": "After a player gains a Path token, place 1 commodity from the supply on this card. At the end of your turn, you may exhaust this card to gain all commodities on this card",
+    "unitPositions": {
+      "unitHolderName": "uikos",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 119
+          }
+        ],
+        "sd": [
+          {
+            "x": 189,
+            "y": 154
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 146
+          },
+          {
+            "x": 151,
+            "y": 146
+          },
+          {
+            "x": 168,
+            "y": 146
+          },
+          {
+            "x": 143,
+            "y": 157
+          },
+          {
+            "x": 161,
+            "y": 157
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 75
+          },
+          {
+            "x": 154,
+            "y": 75
+          },
+          {
+            "x": 129,
+            "y": 88
+          },
+          {
+            "x": 147,
+            "y": 88
+          },
+          {
+            "x": 165,
+            "y": 88
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 116
+          },
+          {
+            "x": 115,
+            "y": 116
+          }
+        ],
+        "att": [
+          {
+            "x": 64,
+            "y": 177
+          },
+          {
+            "x": 80,
+            "y": 77
+          },
+          {
+            "x": 199,
+            "y": 108
+          },
+          {
+            "x": 191,
+            "y": 77
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "ds",
+    "__file": "uikos.json"
+  },
+  {
+    "id": "violence",
+    "tileId": "er113",
+    "name": "Violence",
+    "aliases": [
+      "violence"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 130
+    },
+    "resources": 3,
+    "influence": 1,
+    "planetTypes": [
+      "INDUSTRIAL"
+    ],
+    "legendaryAbilityName": "Violent Demise",
+    "legendaryAbilityText": "At the end of a ground combat on a planet you control, you may exhaust this card to roll 3 dice. For each result of 6 or greater, destroy 1 ground force on that planet.",
+    "unitPositions": {
+      "unitHolderName": "violence",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 117
+          }
+        ],
+        "sd": [
+          {
+            "x": 100,
+            "y": 152
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 144
+          },
+          {
+            "x": 151,
+            "y": 144
+          },
+          {
+            "x": 168,
+            "y": 144
+          },
+          {
+            "x": 143,
+            "y": 155
+          },
+          {
+            "x": 161,
+            "y": 155
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 73
+          },
+          {
+            "x": 154,
+            "y": 73
+          },
+          {
+            "x": 129,
+            "y": 86
+          },
+          {
+            "x": 147,
+            "y": 86
+          },
+          {
+            "x": 165,
+            "y": 86
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 114
+          },
+          {
+            "x": 115,
+            "y": 114
+          }
+        ],
+        "att": [
+          {
+            "x": 67,
+            "y": 121
+          },
+          {
+            "x": 191,
+            "y": 75
+          },
+          {
+            "x": 199,
+            "y": 106
+          },
+          {
+            "x": 191,
+            "y": 137
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "eronous",
+    "__file": "violence.json"
+  },
+  {
+    "id": "widmore",
+    "tileId": "c01",
+    "name": "widmore",
+    "aliases": [
+      "widmore",
+      "weedmore",
+      "wildmore"
+    ],
+    "positionInTile": {
+      "x": 170,
+      "y": 150
+    },
+    "resources": 3,
+    "influence": 2,
+    "factionHomeworld": null,
+    "planetType": "CULTURAL",
+    "cardImagePath": null,
+    "techSpecialties": null,
+    "legendaryAbilityName": "placeholder",
+    "legendaryAbilityText": "foo bar",
+    "unitPositions": {
+      "unitHolderName": "widmore",
+      "coordinateMap": {
+        "control": [
+          {
+            "x": 129,
+            "y": 147
+          }
+        ],
+        "sd": [
+          {
+            "x": 189,
+            "y": 182
+          }
+        ],
+        "pd": [
+          {
+            "x": 134,
+            "y": 174
+          },
+          {
+            "x": 151,
+            "y": 174
+          },
+          {
+            "x": 168,
+            "y": 174
+          },
+          {
+            "x": 143,
+            "y": 185
+          },
+          {
+            "x": 161,
+            "y": 185
+          }
+        ],
+        "mf": [
+          {
+            "x": 136,
+            "y": 103
+          },
+          {
+            "x": 154,
+            "y": 103
+          },
+          {
+            "x": 129,
+            "y": 116
+          },
+          {
+            "x": 147,
+            "y": 116
+          },
+          {
+            "x": 165,
+            "y": 116
+          }
+        ],
+        "tkn_gf": [
+          {
+            "x": 148,
+            "y": 144
+          },
+          {
+            "x": 115,
+            "y": 144
+          }
+        ],
+        "att": [
+          {
+            "x": 72,
+            "y": 136
+          },
+          {
+            "x": 80,
+            "y": 105
+          },
+          {
+            "x": 199,
+            "y": 136
+          },
+          {
+            "x": 191,
+            "y": 105
+          }
+        ]
+      },
+      "removeUnitCoordinate": true
+    },
+    "source": "lost_star_charts_of_ixth",
+    "__file": "widmore.json"
+  }
+]
