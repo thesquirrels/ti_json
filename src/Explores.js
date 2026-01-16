@@ -3,7 +3,9 @@ import ActionCards from "./ActionCardPage";
 
 function Explores({dataDir, dataSources, handleDataSourceChange}) {
     const exploreSources = [
-        'data/explores/explores.json',
+        'TI4_map_generator_bot/src/main/resources/data/explores/explores.json',
+        'TI4_map_generator_bot/src/main/resources/data/explores/codex3.json',
+        'TI4_map_generator_bot/src/main/resources/data/explores/uncharted_space.json',
     ];
 
     const [exploreData, setData] = useState([]);
@@ -81,7 +83,7 @@ function Explores({dataDir, dataSources, handleDataSourceChange}) {
                 exploreCard.source === 'codex1' || exploreCard.source === 'pok')) ||
             (dataSources.keleres && exploreCard.source === 'codex2') ||
             (dataSources.keleres && exploreCard.source === 'codex3') ||
-            (dataSources.discordantStars && exploreCard.source === 'ds')
+            (dataSources.discordantStars && (exploreCard.source === 'ds' || exploreCard.source === 'uncharted_space'))
         );
         // If the card is not from the selected sources, ignore it
         if (!isFromSelectedSource) return false; // Filter out cards not from the selected sources
@@ -106,7 +108,7 @@ function Explores({dataDir, dataSources, handleDataSourceChange}) {
     return (
         <div className="grid-container">
             {filteredDataExplores.map((exploreCard) => {
-                const typeImageSrc = `${dataDir}general/${exploreCard.type}.png`;
+                const typeImageSrc = `${dataDir}/TI4_map_generator_bot/src/main/resources/general/${exploreCard.type}.png`;
                 console.log(typeImageSrc);
                 return (
                     <div key={exploreCard.flavorText} className="grid-item">

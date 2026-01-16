@@ -49,21 +49,46 @@ ul li, ol li {
   border-radius: 8px;
   padding:8px;
 }
+
+.planet-grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  grid-auto-rows: 1fr; /* Ensure all rows have equal height */
+}
+
+.planet-grid-item{
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding:8px;
+}
+
 .flavor-text {
   font-size: 10pt;
   margin-top: auto; /* Pushes the flavor text to the bottom */
   font-style: italic; /* You can apply more styles here */
 }
+
 .card-name{
   padding-bottom: 10px;
   flex-grow: 1; /* Allow the card name to take up remaining space */
-
 }
+
+.card-header {
+  display: grid;
+  grid-template-columns: 1fr auto;  /* left grows, right hugs content */
+  align-items: start;
+  column-gap: 8px;
+}
+
 .card-title{
   display: flex;
   flex-direction: row; /* Stack elements vertically */
   width: 100%;
-  gap: 10px;
+  gap: 3px;
   justify-content: space-between;
 }
 
@@ -72,11 +97,13 @@ ul li, ol li {
   flex-direction: row; /* Stack elements vertically */
   gap:3px;
 }
+
 .card-type-image{
   width:40px;
   height:40px;
   z-index: 1;
 }
+
 .card-count {
   z-index: 2;
   color: black;
@@ -84,6 +111,81 @@ ul li, ol li {
   font-weight: bold;
 }
 
+.card-corner-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.card-corner-row-tech {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.break {
+  flex-basis: 100%; /* forces everything after to start on a new line */
+  height: 0;
+}
+
+.card-legendary-image{
+  width:32px;
+  height:32px;
+  z-index: 1;
+}
+
+/* Right top corner: stack types row above stat row, right-aligned */
+.right-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;    /* right align */
+  gap: 6px;                 /* space between type-row and stat-row */
+}
+
+/* Planet type / legendary icons row */
+.type-row {
+  display: block;
+  align-items: center;
+  gap: 6px;                 /* tight spacing between icons */
+}
+
+/* Pills for resources / influence */
+.stat-row {
+  display: flex;
+  flex-wrap: nowrap;          /* never wrap */
+  gap: 3px;
+  align-items: center;
+  width: min-content;
+  align-self: flex-end;
+}
+
+.stat-pill {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.stat-pill-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+.stat-pill-value {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;           /* white text */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7); /* legible over image */
+  pointer-events: none;
+}
 
 /* Default layout for larger screens (computer browser) */
 .faction-list {
@@ -109,6 +211,16 @@ ul li, ol li {
   padding-right: 20px;
 }
 
+.sc-list {
+  list-style: disc;          /* keep native bullets */
+  padding-left: 1.2rem;
+  margin: 8px 0;
+}
+.sc-list li { margin: 4px 0; }
+.sc-list li::marker {
+  color: #444;               /* bullet color */
+  font-size: 1.1em;          /* bullet size */
+}
 /* Each column takes up 1/3 of the width on larger screens */
 .column {
   flex: 1; /* 1/3 width of the container */

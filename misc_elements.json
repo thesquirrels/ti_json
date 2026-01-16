@@ -206,5 +206,56 @@
         "text": "When this card is revealed, gain 1 non-faction technology owned by the puppeted player.\nWhen the puppeted player gains a non-faction technology, you may spend 4 resources to gain that technology."
       }
     ]
+  },
+  {
+    "alias": "deepwrought",
+    "title": "Oceans",
+    "components":[
+      {
+        "title": "Deep Abyss - (1/1)",
+        "text": "The Abyssal zone features such dramatic pressure that even most Hylar need assistance to survive in the lightless depths.\n"
+      },
+      {
+        "title": "Brine Pool - (1/1)",
+        "text": "Sites with unique oceanic chemistry are of obvious interest to Deepwrought researchers.\n"
+      },
+      {
+        "title": "Coral Reaf - (1/1)",
+        "text": "Coral-analogues have evolved on many worlds, and their \"reefs\" are always areas of intense biodiversity.\n"
+      },
+      {
+        "title": "Ice Shelf - (1/1)",
+        "text": "Drylanders frequently discount the scientific opportunities to be found beneath their own polar ice sheets.\n"
+      },
+      {
+        "title": "Lost Fleet - (1/1)",
+        "text": "Although usually badly degraded by water and time, shipwrecks remain fascinating areas of exploration and study, whether those ships sailed seas or stars.\n"
+      }
+    ]
+  },
+  {
+    "alias": "titans",
+    "tokens": "5x Sleeper Tokens"
+  },
+  {
+    "alias": "gledge",
+    "tokens": "3x Core Tokens",
+    "count": 3
+  },
+  {
+    "alias": "empyrean",
+    "tokens": "2x Void Tether Tokens"
+  },
+  {
+    "alias": "bastion",
+    "tokens": "7x Galvanize Tokens"
+  },
+  {
+    "alias": "ghost",
+    "tokens": ["1x Alpha Wormhole Token, 1x Beta Wormhole Token, 1x Gamma Wormhole Token"]
+  },
+  {
+    "alias": "crimson",
+    "tokens": ["7x Breach Tokens, 1x Sever Token"]
   }
 ]

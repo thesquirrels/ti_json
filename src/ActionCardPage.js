@@ -4,9 +4,9 @@ import Agendas from "./AgendasPage";
 function ActionCards({dataDir, dataSources, handleDataSourceChange}) {
 
     const actionCardSources = [
-        'data/action_cards/action_cards.json',
-        'data/action_cards/uncharted_space.json',
-        'data/action_cards/te_actioncards.json'
+        'TI4_map_generator_bot/src/main/resources/data/action_cards/action_cards.json',
+        'TI4_map_generator_bot/src/main/resources/data/action_cards/uncharted_space.json',
+        'TI4_map_generator_bot/src/main/resources/data/action_cards/te_actioncards.json'
     ];
 
     const [data, setData] = useState([]);

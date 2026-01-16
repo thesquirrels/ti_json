@@ -14,6 +14,11 @@ const Sidebar = ({dataSources, handleDataSourceChange }) => {
                 <Link to="secret-objectives">Secret Objectives</Link>
                 <Link to="explores">Explores</Link>
                 <Link to="relics">Relics</Link>
+                <Link to="planets">Planets</Link>
+                <Link to="legendary-planets">Legendary Planets</Link>
+                <Link to="techs">Technologies</Link>
+                <Link to="scs">Strategy Cards</Link>
+                <Link to="pns">Promissory Notes</Link>
             </div>
             <div className={"checkboxes"}>
                 {/* Checkboxes for Data Sources */}

@@ -11,11 +11,20 @@ import Explores from "./Explores";
 import Relics from "./RelicsPage";
 import Publics from "./PublicObjectivePage";
 import Secrets from "./SecretObjectivesPage";
+import LegendaryPlanets from "./LegendaryPlanetsPage";
+import Planets from "./PlanetsPage";
+import Technology from "./TechsPage";
+import SCs from "./StrategyPage";
+import PNs from "./PromissoriesPage";
+
+
+
+
 
 
 // Define the FactionDetails component to show detailed info
 function App() {
-    const dataDir = `${process.env.PUBLIC_URL}/TI4_map_generator_bot/src/main/resources/`
+    const dataDir = `${process.env.PUBLIC_URL}/`
 
     const [factions, setFactions] = useState([]);
     const [dataSources, setDataSources] = useState({
@@ -36,8 +45,7 @@ function App() {
     // Helper function to render faction decals based on alias
     const renderFactionDecal = (alias) => {
         // Construct the decal image path based on the alias
-        const decalPath = dataDir + `factions/${alias}.png`;
-
+        const decalPath = dataDir + `TI4_map_generator_bot/src/main/resources/factions/${alias}.png`;
         // Style for the decal image
         const decalStyle = {
             height: '1.5em',  // Adjust size as needed
@@ -55,28 +63,30 @@ function App() {
         async function fetchFactions() {
             let loadedFactions = [];
 
+            console.log(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/base.json')
+
             if (dataSources.basePok) {
-                const baseResponse = await fetch(dataDir + 'data/factions/base.json');
-                const pokResponse = await fetch(dataDir + 'data/factions/pok.json');
+                const baseResponse = await fetch(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/base.json');
+                const pokResponse = await fetch(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/pok.json');
                 const baseFactions = await baseResponse.json();
                 const pokFactions = await pokResponse.json();
                 loadedFactions = [...loadedFactions, ...baseFactions, ...pokFactions];
             }
 
             if (dataSources.keleres) {
-                const keleresResponse = await fetch(dataDir + 'data/factions/keleres.json');
+                const keleresResponse = await fetch(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/keleres.json');
                 const keleresFactions = await keleresResponse.json();
                 loadedFactions = [...loadedFactions, ...keleresFactions];
             }
 
             if (dataSources.discordantStars) {
-                const dsResponse = await fetch(dataDir + 'data/factions/ds.json');
+                const dsResponse = await fetch(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/ds.json');
                 const dsFactions = await dsResponse.json();
                 loadedFactions = [...loadedFactions, ...dsFactions];
             }
 
             if (dataSources.thunders_edge) {
-                const dsResponse = await fetch(dataDir + 'data/factions/te_factions.json');
+                const dsResponse = await fetch(dataDir + 'TI4_map_generator_bot/src/main/resources/data/factions/te_factions.json');
                 const dsFactions = await dsResponse.json();
                 loadedFactions = [...loadedFactions, ...dsFactions];
             }
@@ -139,6 +149,31 @@ function App() {
                         handleDataSourceChange={handleDataSourceChange}
                     />}/>
                     <Route path="secret-objectives" element={<Secrets
+                        dataDir={dataDir}
+                        dataSources={dataSources}
+                        handleDataSourceChange={handleDataSourceChange}
+                    />}/>
+                    <Route path="legendary-planets" element={<LegendaryPlanets
+                        dataDir={dataDir}
+                        dataSources={dataSources}
+                        handleDataSourceChange={handleDataSourceChange}
+                    />}/>
+                    <Route path="planets" element={<Planets
+                        dataDir={dataDir}
+                        dataSources={dataSources}
+                        handleDataSourceChange={handleDataSourceChange}
+                    />}/>
+                    <Route path="techs" element={<Technology
+                        dataDir={dataDir}
+                        dataSources={dataSources}
+                        handleDataSourceChange={handleDataSourceChange}
+                    />}/>
+                    <Route path="scs" element={<SCs
+                        dataDir={dataDir}
+                        dataSources={dataSources}
+                        handleDataSourceChange={handleDataSourceChange}
+                    />}/>
+                    <Route path="pns" element={<PNs
                         dataDir={dataDir}
                         dataSources={dataSources}
                         handleDataSourceChange={handleDataSourceChange}

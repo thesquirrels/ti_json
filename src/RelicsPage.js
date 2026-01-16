@@ -2,11 +2,11 @@ import React, {useEffect, useState} from "react";
 
 function Relics({ dataDir, dataSources, handleDataSourceChange}) {
     const relicSources = [
-        'data/relics/codexii.json',
-        'data/relics/codexiv.json',
-        'data/relics/pok.json',
-        'data/relics/ds.json',
-        'data/relics/te_relics.json',
+        'TI4_map_generator_bot/src/main/resources/data/relics/codexii.json',
+        'TI4_map_generator_bot/src/main/resources/data/relics/codexiv.json',
+        'TI4_map_generator_bot/src/main/resources/data/relics/pok.json',
+        'TI4_map_generator_bot/src/main/resources/data/relics/ds.json',
+        'TI4_map_generator_bot/src/main/resources/data/relics/te_relics.json',
     ];
     const [data, setData] = useState([]);
 
@@ -87,14 +87,23 @@ function Relics({ dataDir, dataSources, handleDataSourceChange}) {
                 {filteredDataRelics.map((relicCard) => (
                     <div key={relicCard.flavorText} className="grid-item">
                         <div className="card-text">
-                            <span style={{fontWeight: 'bold', fontSize: '14pt'}}>{relicCard.name}</span><br/><br/>
-                            {formatRelicText(relicCard.text)}<br/>
-                        </div>
+                            <div className="card-title">
+                                <span style={{fontWeight: 'bold', fontSize: '14pt'}}>{relicCard.name}</span><br/>
+                                <div className='card-corner'>
+                                    <img
+                                        src={dataDir + 'TI4_map_generator_bot/src/main/resources/general/Relic.png'}
+                                        alt="Relic"
+                                        className="card-type-image"
+                                    />
+                                </div>
+                            </div>
+                                {formatRelicText(relicCard.text)}<br/>
+                            </div>
                         <br/>
                         <em className="flavor-text">{relicCard.flavourText}</em>
+                        </div>
+                        ))}
                     </div>
-                ))}
-            </div>
         </div>
     );
 }

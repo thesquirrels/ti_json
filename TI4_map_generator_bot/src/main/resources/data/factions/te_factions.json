@@ -45,7 +45,13 @@
             "pds",
             "bastion_spacedock"
         ],
-        "source": "thunders_edge"
+        "preferredColours": [
+            "dw",
+            "ylw",
+            "tpl"
+        ],
+        "source": "thunders_edge",
+        "priorityNumber": 21
     },
     {
         "alias": "deepwrought",
@@ -86,7 +92,13 @@
             "pds",
             "spacedock"
         ],
-        "source": "thunders_edge"
+        "preferredColours": [
+            "gcr",
+            "ppl",
+            "vpw"
+        ],
+        "source": "thunders_edge",
+        "priorityNumber": 7
     },
     {
         "alias": "firmament",
@@ -133,7 +145,13 @@
             "pds",
             "spacedock"
         ],
-        "source": "thunders_edge"
+        "preferredColours": [
+            "rby",
+            "gry",
+            "psn"
+        ],
+        "source": "thunders_edge",
+        "priorityNumber": 30
     },
     {
         "alias": "obsidian",
@@ -222,7 +240,13 @@
             "pds",
             "spacedock"
         ],
-        "source": "thunders_edge"
+        "preferredColours": [
+            "red",
+            "nm",
+            "sns"
+        ],
+        "source": "thunders_edge",
+        "priorityNumber": 16
     },
     {
         "alias": "ralnel",
@@ -269,6 +293,12 @@
             "pds",
             "spacedock"
         ],
-        "source": "thunders_edge"
+        "preferredColours": [
+            "lme",
+            "wtm",
+            "grn"
+        ],
+        "source": "thunders_edge",
+        "priorityNumber": 12
     }
 ]

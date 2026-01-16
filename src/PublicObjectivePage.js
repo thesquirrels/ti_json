@@ -3,15 +3,13 @@ import React, {useEffect, useState} from "react";
 function Publics({ dataDir, dataSources, handleDataSourceChange}) {
 
     const objectiveSources = [
-        'data/public_objectives/public_objectives.json',
-        //'data/secret_objectives/secret_objectives.json',
+        'TI4_map_generator_bot/src/main/resources/data/public_objectives/public_objectives.json',
     ];
     const [data, setData] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
             let loadedData = [];
-
             // Loop through all the data sources and fetch them
             for (let source of objectiveSources) {
                 try {
@@ -24,17 +22,32 @@ function Publics({ dataDir, dataSources, handleDataSourceChange}) {
             }
             setData(loadedData);
         }
-
         fetchData();
     }, [dataSources]);
 
+    const filteredDataObjectives = data.filter(POCard => {
+        // Check if the card's source matches any of the selected expansions
+        const isFromSelectedSource = (
+            (dataSources.basePok && (POCard.source === 'base' ||
+                POCard.source === 'codex1' || POCard.source === 'pok')) ||
+            (dataSources.keleres && POCard.source === 'codex2') ||
+            (dataSources.keleres && POCard.source === 'codex3') ||
+            (dataSources.keleres && POCard.source === 'codex4') ||
+            (dataSources.discordantStars && (POCard.source === 'ds' || POCard.source === 'uncharted_space')) ||
+            (dataSources.thunders_edge && POCard.source === 'thunders_edge')
+        );
+        // If the card is not from the selected sources, ignore it
+        if (!isFromSelectedSource) return false; // Filter out cards not from the selected sources
+        return true;
+    });
+
     return (
             <div className="grid-container">
-                {data.map((objectiveCard) => {
+                {filteredDataObjectives.map((objectiveCard) => {
                     const typeImageSrc = objectiveCard.points === 1
-                        ? `${dataDir}general/Public1.png`
+                        ? `${dataDir}TI4_map_generator_bot/src/main/resources/general/Public1.png`
                         : objectiveCard.points === 2
-                            ? `${dataDir}general/Public2.png`
+                            ? `${dataDir}TI4_map_generator_bot/src/main/resources/general/Public2.png`
                             : null; // No image if points is neither 1 nor 2
                     return (
                     <div key={objectiveCard.alias} className="grid-item">

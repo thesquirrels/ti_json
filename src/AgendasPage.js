@@ -3,8 +3,8 @@ import React, {useEffect, useState} from "react";
 function Agendas({ dataDir, dataSources, handleDataSourceChange}) {
 
     const agendaSources = [
-        'data/agendas/base.json',
-        'data/agendas/pok.json',
+        'TI4_map_generator_bot/src/main/resources/data/agendas/base.json',
+        'TI4_map_generator_bot/src/main/resources/data/agendas/pok.json',
     ];
     const [data, setData] = useState([]);
 

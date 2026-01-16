@@ -40,7 +40,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
             };
             const factionFile = factionFileMap[source] ?? `${source}.json`;
             try {
-                const response = await fetch(dataDir + `data/factions/${factionFile}`);
+                const response = await fetch(dataDir + `TI4_map_generator_bot/src/main/resources/data/factions/${factionFile}`);
                 const data = await response.json();
                 const foundFaction = data.find(faction => faction.alias === alias);
                 setSelectedFaction(foundFaction);
@@ -54,7 +54,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
     // Helper function to render faction decals based on alias
     const renderFactionDecal = (alias) => {
         // Construct the decal image path based on the alias
-        const decalPath = dataDir + `factions/${alias}.png`;
+        const decalPath = dataDir + `TI4_map_generator_bot/src/main/resources/factions/${alias}.png`;
 
         // Style for the decal image
         const decalStyle = {
@@ -94,10 +94,10 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
     const renderTechOrUnitImages = (typeString) => {
         // Map tech/unit types to corresponding image paths
         const techTypeToImage = {
-            B: 'general/Propulsion_dark.png',
-            R: 'general/Warfare_dark.png',
-            Y: 'general/Cybernetic_dark.png',
-            G: 'general/Biotic_dark.png',
+            B: 'TI4_map_generator_bot/src/main/resources/general/Propulsion_dark.png',
+            R: 'TI4_map_generator_bot/src/main/resources/general/Warfare_dark.png',
+            Y: 'TI4_map_generator_bot/src/main/resources/general/Cybernetic_dark.png',
+            G: 'TI4_map_generator_bot/src/main/resources/general/Biotic_dark.png',
         };
 
         // Function to get the image path for a given type
@@ -125,18 +125,46 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         return keleresAliases.includes(alias) ? 'keleres' : alias;
     };
 
-    // Abbreviation to full name mapping
-    const unitMap = {
-        cv: "carrier",
-        cr: "cruiser",
-        ff: "fighter",
-        inf: "infantry",
-        sd: "space dock",
-        pds: "PDS",
-        dn: "dreadnought",
-        dd: "destroyer",
-        fs: "flagship"
-    };
+    // Normalize tokens like "Space_Dock", "space dock", "CRUiser" → "spacedock", "spacedock", "cruiser"
+    function normToken(s) {
+        return String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
+    }
+
+// Build a big alias map once
+    function buildUnitMap() {
+        // canonical name -> list of aliases/typos (include canonical itself)
+        var aliasesByCanon = {
+            // Core units
+            'carrier':      ['carrier','cv','carriers','car','carol','carols','carr'],
+            'cruiser':      ['cruiser','ca','cr','cruisers','cru','cruser','criuser','tommer','cruiswr','crusier','cl'],
+            'destroyer':    ['destroyer','dd','destroyers','destoryer','destoryers','stroter','stroters','dest','des','stroder','stroders','strudel','strudels','dangle','bopper','danglebopper'],
+            'dreadnought':  ['dreadnought','dn','dread','dr','dreadnough','dreadnaugh','dreads','dreadnaught','dreadnaughts','dred','dreds','chad','chads'],
+            'fighter':      ['fighter','ff','fighters','figter','fight','ftr','hp','hps','figther','ffs'],
+            'flagship':     ['flagship','fs','flag','flaggy','hugevan','flagy'],
+            'infantry':     ['infantry','inf','gf','groud','groundforce','dude','duder','dudes','duders','dudettes','dudette','infantery'],
+            'mech':         ['mech','mf','mechanized','mechs'],
+            'pds':          ['pds','pd','pdf'],
+            'space dock':   ['space dock','sd','spacedock','space_dock','dock','spd'],
+            'war sun':      ['war sun','ws','war','warsuns','war_sun','peacesun','peace','warsun'],
+
+            'cabal space dock': ['csd','vsd','vrcsd','dtsd','cabalspacedock','vuildock','cabaldock','cabalsd'],
+            "tyrant's lament":  ['tyrantslament','tyrant','absolfs','tyr','lament'],
+            'the lady':         ['lady','thelady','gheminalady'],
+            'plenary orbital':  ['plenaryorbital','plenary','orbital','plen','orb'],
+            'cavalry (nomad pn)': ['cavalry','calvary','calvery','cav','nomadpn'],
+        };
+
+        var map = {};
+        Object.keys(aliasesByCanon).forEach(function(canon) {
+            aliasesByCanon[canon].forEach(function(alias) {
+                map[normToken(alias)] = canon;   // every alias → canonical
+            });
+            map[normToken(canon)] = canon;     // canonical → canonical
+        });
+        return map;
+    }
+
+    const unitMap = buildUnitMap();
 
     const formatUnitInfo = (unit, prerequisites = null) => {
         const fields = [];
@@ -152,6 +180,13 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
             fields.push(
                 <span key="bombard">
                     <strong>BOMBARDMENT </strong> {unit.bombardHitsOn}x{unit.bombardDieCount}
+                </span>
+            );
+        }
+        if (unit.spaceCannonHitsOn) {
+            fields.push(
+                <span key="space_cannon">
+                    <strong>SPACE CANNON </strong> {unit.spaceCannonHitsOn}x{unit.spaceCannonDieCount}
                 </span>
             );
         }
@@ -262,44 +297,61 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         );
     };
 
+    // --- normalization helpers ---
+    function normToken(s) { return String(s).toLowerCase().replace(/[^a-z0-9]/g, ''); }
+    function pluralize(name, n) {
+        // special cases
+        if (name === 'infantry') return n + ' infantry';
+        if (name === 'pds')      return n + ' PDS' + (n > 1 ? 's' : '');
+        if (name === 'war sun')  return n + ' war sun' + (n > 1 ? 's' : '');
+        if (name === 'space dock') return n + ' space dock' + (n > 1 ? 's' : '');
+        // default
+        return n + ' ' + name + (n > 1 ? 's' : '');
+    }
+
     const parseStartingFleet = (fleetString) => {
-        // Object to hold the sum of each unit type
-        const fleetCount = {};
+        var counts = {};                   // total by unit
+        var byFlag = {};                   // per-flag by unit
+        var parts = String(fleetString || '').split(',');
 
-        // Split the fleet string into parts and parse each one
-        const fleetParts = fleetString.split(",");
-        fleetParts.forEach(part => {
-            // Extract the count and unit abbreviation (e.g., "2 cv" or "cr")
-            const match = part.match(/(\d*)\s*(\w+)/);
-            if (match) {
-                const count = match[1] ? parseInt(match[1], 10) : 1;  // If no count is specified, assume 1
-                const unit = match[2];
+        for (var i = 0; i < parts.length; i++) {
+            var part = parts[i].trim();
+            if (!part) continue;
 
-                // Map the unit abbreviation to the full name
-                if (unitMap[unit]) {
-                    const unitName = unitMap[unit];
+            // capture: optional count, unit token, optional trailing flag word/letter
+            // e.g. "1 inf r", "ff", "2 space_dock s"
+            var m = part.match(/^\s*(\d+)?\s*([a-z0-9_]+)(?:\s+([a-z0-9_]+))?\s*$/i);
+            if (!m) continue;
 
-                    // Sum the units
-                    if (fleetCount[unitName]) {
-                        fleetCount[unitName] += count;
-                    } else {
-                        fleetCount[unitName] = count;
-                    }
-                }
+            var n    = m[1] ? parseInt(m[1], 10) : 1;
+            var unit = normToken(m[2]);
+            var flag = m[3] || '';
+
+            var canon = unitMap[unit];
+            if (!canon) continue; // unknown token -> skip or log
+
+            // bump totals
+            counts[canon] = (counts[canon] || 0) + n;
+
+            // bump flag bucket
+            if (flag) {
+                if (!byFlag[canon]) byFlag[canon] = {};
+                byFlag[canon][flag] = (byFlag[canon][flag] || 0) + n;
             }
-        });
-        // Format the output string
-        return Object.entries(fleetCount)
-            .map(([unitName, count]) => {
-                // Special case for "infantry" (no plural form)
-                if (unitName === "infantry") {
-                    return `${count} infantry`;
-                }
+        }
 
-                // Handle plural form for other units
-                return `${count} ${unitName}${count > 1 ? "s" : ""}`;
-            })
-            .join(", ");
+        // Build a pretty summary like your existing function
+        var order = ['flagship','war sun','dreadnought','cruiser','destroyer','carrier','fighter','infantry','mech','pds','space dock'];
+        var items = [];
+        order.forEach(function(name){
+            if (counts[name]) items.push(pluralize(name, counts[name]));
+        });
+        // Include any others not in the preferred order
+        Object.keys(counts).forEach(function(name){
+            if (order.indexOf(name) === -1) items.push(pluralize(name, counts[name]));
+        });
+
+        return items.join(', ')
     };
 
     const formatTechText = (text) => {
@@ -321,10 +373,10 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         if (selectedFaction && selectedFaction.source) {
             async function fetchLeaderData() {
                 try {
-                    var files = [dataDir + 'data/leaders/pok.json'];
-                    files.push(dataDir + 'data/leaders/te_leaders.json');
+                    var files = [dataDir + 'TI4_map_generator_bot/src/main/resources/data/leaders/pok.json'];
+                    files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/leaders/te_leaders.json');
                     if (selectedFaction.source === 'ds') {
-                        files.push(dataDir + 'data/leaders/ds.json');
+                        files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/leaders/ds.json');
                     }
                     var uniqueFiles = Array.from(new Set(files));
                     var jsons = await Promise.all(uniqueFiles.map(function (url) {
@@ -351,7 +403,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
                         : selectedFaction.source === "thunders_edge"
                         ? "te_abilities"
                         : selectedFaction.source;
-                    const abilityResponse = await fetch(dataDir + `data/abilities/${abilitySource}.json`);
+                    const abilityResponse = await fetch(dataDir + `TI4_map_generator_bot/src/main/resources/data/abilities/${abilitySource}.json`);
                     const abilityJson = await abilityResponse.json();
                     setAbilityData(abilityJson);  // Store ability data
                 } catch (error) {
@@ -367,9 +419,18 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         if (selectedFaction && selectedFaction.source) {
             async function fetchBreakthroughData() {
                 try {
-                    const btResponse = await fetch(dataDir + `data/breakthroughs/te_breakthroughs.json`);
-                    const btJson = await btResponse.json();
-                    setBreakthroughData(btJson);  // Store ability data
+                    var files = [dataDir + 'TI4_map_generator_bot/src/main/resources/data/breakthroughs/te_breakthroughs.json'];
+                    if (selectedFaction.source === 'ds') {
+                        files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/breakthroughs/ds_breakthroughs.json');
+                        files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/breakthroughs/br_breakthroughs.json');
+                    }
+                    var uniqueFiles = Array.from(new Set(files));
+                    var jsons = await Promise.all(uniqueFiles.map(function (url) {
+                        return fetch(url).then(function (r) { return r.json(); });
+                    }));
+                    var btData = [].concat.apply([], jsons); // flat()
+                    setBreakthroughData(btData);  // Store leader data
+
                 } catch (error) {
                     console.error("Error fetching breakthrough data:", error);
                 }
@@ -385,7 +446,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
                 try {
                     // Fetch all home planet JSON files in parallel
                     const planetPromises = selectedFaction.homePlanets.map(planet =>
-                        fetch(dataDir + `planets/${planet}.json`).then(res => res.json())
+                        fetch(dataDir + `TI4_map_generator_bot/src/main/resources/planets/${planet}.json`).then(res => res.json())
                     );
                     const planets = await Promise.all(planetPromises);
                     setHomePlanetData(planets);  // Store all fetched planet data
@@ -402,10 +463,10 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         if (selectedFaction && selectedFaction.source) {
             async function fetchTechData() {
                 try {
-                    var files = [dataDir + 'data/technologies/pok.json'];
-                    files.push(dataDir + 'data/technologies/te_techs.json');
+                    var files = [dataDir + 'TI4_map_generator_bot/src/main/resources/data/technologies/pok.json'];
+                    files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/technologies/te_techs.json');
                     if (selectedFaction.source === 'ds') {
-                        files.push(dataDir + 'data/technologies/ds.json');
+                        files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/technologies/ds.json');
                     }
                     var uniqueFiles = Array.from(new Set(files));
                     var jsons = await Promise.all(uniqueFiles.map(function (url) {
@@ -426,11 +487,11 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
         if (selectedFaction && selectedFaction.source) {
             async function fetchUnitData() {
                 try {
-                    var files = [dataDir + 'data/units/pok.json'];
-                    files.push(dataDir + 'data/units/te_units.json');
-                    files.push(dataDir + 'data/units/keleres.json');
+                    var files = [dataDir + 'TI4_map_generator_bot/src/main/resources/data/units/pok.json'];
+                    files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/units/te_units.json');
+                    files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/units/keleres.json');
                     if (selectedFaction.source === 'ds') {
-                        files.push(dataDir + 'data/units/ds.json');
+                        files.push(dataDir + 'TI4_map_generator_bot/src/main/resources/data/units/ds.json');
                     }
                     var uniqueFiles = Array.from(new Set(files));
                     var jsons = await Promise.all(uniqueFiles.map(function (url) {
@@ -453,8 +514,9 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
             async function fetchPromissoryNoteData() {
                 try {
                     // Handle special case for base source
-                    const promissorySource = selectedFaction.source === "base" || selectedFaction.source === "pok" || selectedFaction.source === "codex3" ? "promissory_notes/promissory_notes" : `promissory_notes/${selectedFaction.source}`;
-                    const promissoryResponse = await fetch(dataDir + `data/${promissorySource}.json`);
+                    const promissorySource = selectedFaction.source === "base" || selectedFaction.source === "pok" || selectedFaction.source === "codex3" ?
+                        "promissory_notes/promissory_notes" : `promissory_notes/${selectedFaction.source}`;
+                    const promissoryResponse = await fetch(dataDir + `TI4_map_generator_bot/src/main/resources/data/${promissorySource}.json`);
                     const promissoryJson = await promissoryResponse.json();
                     setPromissoryNoteData(promissoryJson);
                 } catch (error) {
@@ -470,7 +532,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
     useEffect(() => {
         async function fetchCustomStartingTech() {
             try {
-                const response = await fetch('ti_json/starting_tech.json'); // Adjust path accordingly
+                const response = await fetch(dataDir + 'starting_tech.json'); // Adjust path accordingly
                 const data = await response.json();
                 setCustomStartingTech(data);
             } catch (error) {
@@ -484,7 +546,7 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
     useEffect(() => {
         async function fetchExtraComponents() {
             try {
-                const response = await fetch('ti_json/misc_elements.json'); // Adjust path as necessary
+                const response = await fetch(dataDir + 'misc_elements.json'); // Adjust path as necessary
                 const data = await response.json();
                 setExtraComponents(data);
             } catch (error) {
@@ -589,9 +651,116 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
 // true only if there are components to show
     var hasExtra = !!(factionExtraComponents && Array.isArray(factionExtraComponents.components) && factionExtraComponents.components.length);
 
-
     // Add a loading state until faction data is fetched
     if (!(selectedFaction && leaderData && abilityData && homePlanetData)) return <p>Loading...</p>;
+
+    const leaderTypeOrder = { agent: 0, commander: 1, hero: 2 };
+
+    const factionKey =
+        selectedFaction?.alias ?? selectedFaction?.id ?? selectedFaction?.name;
+
+// 1) Get all leaders for this faction (possibly multiple per type from different sources)
+    const factionLeaders = (leaderData || []).filter(
+        (l) => l?.faction === factionKey && ["agent", "commander", "hero"].includes(l?.type)
+    );
+
+// 2) Your prioritize() function (unchanged except I removed the console.log)
+    function prioritize(sameType) {
+        var priority = ["thunders_edge", "codex4", "codex3", "pok", "ds"];
+
+        function allowed(src) {
+            if (src === "thunders_edge") return dataSources.thunders_edge;
+            if (src === "codex3" || src === "codex4") return dataSources.keleres;
+            if (src === "ds") return dataSources.discordantStars;
+            if (src === "pok") return true; // fallback always allowed
+            return false;
+        }
+
+        for (var p = 0; p < priority.length; p++) {
+            var src = priority[p];
+            if (!allowed(src)) continue;
+            for (var j = 0; j < sameType.length; j++) {
+                if (sameType[j].source === src) return sameType[j];
+            }
+        }
+        return sameType.length ? sameType[0] : null;
+    }
+
+    function topNFromLatestSource(items, n) {
+        if (!items || !items.length) return [];
+
+        const priority = ["thunders_edge", "codex4", "codex3", "pok", "ds"];
+
+        function allowed(src) {
+            if (src === "thunders_edge") return dataSources.thunders_edge;
+            if (src === "codex3" || src === "codex4") return dataSources.keleres;
+            if (src === "ds") return dataSources.discordantStars;
+            if (src === "pok") return true;
+            return false;
+        }
+
+        // Choose best allowed source that exists in this set
+        let chosenSource = null;
+        for (let p = 0; p < priority.length; p++) {
+            const src = priority[p];
+            if (!allowed(src)) continue;
+            if (items.some(it => it.source === src)) {
+                chosenSource = src;
+                break;
+            }
+        }
+
+        // If nothing passes flags, fall back to whatever is present
+        const filtered = chosenSource
+            ? items.filter(it => it.source === chosenSource)
+            : items;
+
+        // Optional: stabilize ordering (if you have a numeric order field, use it here)
+        const stable = filtered.slice().sort((a, b) => {
+            // Try to keep a predictable order:
+            // 1) if they have an explicit order/index, use it
+            if (a.sortOrder != null && b.sortOrder != null) return a.sortOrder - b.sortOrder;
+            // 2) else by name, else by id
+            const an = (a.name || "").toLowerCase();
+            const bn = (b.name || "").toLowerCase();
+            if (an && bn && an !== bn) return an.localeCompare(bn);
+            return String(a.id).localeCompare(String(b.id));
+        });
+
+        return stable.slice(0, n);
+    }
+
+    function countLeaderTypes(leaderKeys = []) {
+        return leaderKeys.reduce(
+            (acc, key) => {
+                if (key.includes("agent")) acc.agent++;
+                else if (key.includes("commander")) acc.commander++;
+                else if (key.includes("hero")) acc.hero++;
+                return acc;
+            },
+            { agent: 0, commander: 0, hero: 0 }
+        );
+    }
+
+    const leaderCounts = countLeaderTypes(selectedFaction?.leaders || []);
+
+    const chosenLeaders = ["agent", "commander", "hero"]
+        .flatMap(type => {
+            const sameType = factionLeaders.filter(l => l.type === type);
+            const n = leaderCounts[type] || 0;
+
+            if (!sameType.length || n === 0) return [];
+
+            // Single leader → use prioritize()
+            if (n === 1) {
+                const one = prioritize(sameType);
+                return one ? [one] : [];
+            }
+
+            // Multiple leaders → take top N from latest allowed source
+            return topNFromLatestSource(sameType, n);
+        })
+        .sort((a, b) => (leaderTypeOrder[a.type] ?? 99) - (leaderTypeOrder[b.type] ?? 99));
 
     return (
         <div className="faction-details">
@@ -718,6 +887,14 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
                             </>
                         );
                     })()}
+
+                    {factionExtraComponents?.tokens ? (
+                        <div className="extra">
+                            <strong>Additional Components: </strong>
+                            {factionExtraComponents.tokens}
+                        </div>
+                    ) : null}
+
                     {dataSources && dataSources.thunders_edge ? (
                         <div>
                             <ul>
@@ -810,31 +987,20 @@ function FactionDetails({ match , dataDir, dataSources, handleDataSourceChange})
                 <div className="leaders">
                     <h3>Leaders</h3>
                     <ul>
-                        {selectedFaction.leaders.map(leaderKey => {
-                            // Find the matching leader in leaderData array by id
-                            const leader = leaderData.find(leaderItem => leaderItem.id === leaderKey);
-
-                            if (leader) {
-                                return (
-                                    <li key={leaderKey}>
-                                        <strong>{leader.name}</strong> ({leader.type}) - {leader.title}
+                        {chosenLeaders.map(leader => (
+                            <li key={leader.id}>
+                                <strong>{leader.name}</strong> ({leader.type}) - {leader.title}
+                                <br/>
+                                <strong>{leader.abilityWindow}</strong> {leader.abilityText}
+                                <br/>
+                                {leader.type === "commander" && (
+                                    <>
+                                        <em>Unlock Condition:</em> {leader.unlockCondition}
                                         <br/>
-                                        <strong>{leader.abilityWindow}</strong> {leader.abilityText}
-                                        <br/>
-                                        {/* Display Unlock Condition only if the leader is a Commander */}
-                                        {leader.type === "commander" && (
-                                            <>
-                                                <em>Unlock Condition:</em> {leader.unlockCondition}
-                                                <br/>
-                                            </>
-                                        )}
-                                    </li>
-                                );
-                            } else {
-                                // Fallback if the leader data is not available
-                                return <li key={leaderKey}>{leaderKey}</li>;
-                            }
-                        })}
+                                    </>
+                                )}
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="pns">

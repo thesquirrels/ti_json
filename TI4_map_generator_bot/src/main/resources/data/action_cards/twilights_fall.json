@@ -44,14 +44,14 @@
         "name": "Genophage",
         "phase": "Action",
         "window": "Action",
-        "text": "Discard 1 of your neighbor's genomes.",
+        "text": "Discard 1 of your neighbor's genomes. [Reminder: in TF an agent is called a genome]",
         "source": "twilights_fall"
     },
     {
         "alias": "tf-engineer",
         "name": "Engineer",
         "phase": "Action",
-        "window": "When you draw cards for a splice that you initiated",
+        "window": "When you draw cards for a splice that you initiated [Note: in async, play this before starting the splice]",
         "text": "Add 2 additional cards to the splice; after you choose your card, choose and discard 2 of the spliced cards before passing them to the next player.",
         "source": "twilights_fall"
     },
@@ -59,7 +59,7 @@
         "alias": "tf-manipulate",
         "name": "Manipulate",
         "phase": "Action",
-        "window": "After another player initiates a splice that you are not participating in",
+        "window": "After cards are drawn for a splice that you are not participating in",
         "text": "Take the spliced cards. Choose which card each participating player will take.",
         "source": "twilights_fall"
     },
@@ -171,7 +171,7 @@
         "alias": "tf-reverse",
         "name": "Reverse",
         "phase": "Action",
-        "window": "When a splice begins",
+        "window": "When a splice begins [Note: in async, play this before the splice begins]",
         "text": "Reverse the order the spliced cards are passed.",
         "source": "twilights_fall"
     },
@@ -188,7 +188,7 @@
         "name": "Meddle",
         "phase": "Action",
         "window": "When any die is rolled",
-        "text": "Add or sintract 1 from its result.",
+        "text": "Add or subtract 1 from its result.",
         "source": "twilights_fall"
     },
     {
@@ -253,7 +253,7 @@
         "name": "Unravel",
         "phase": "Action",
         "window": "Action",
-        "text": "Choose and purge a relic. If the relic belonged to another player, that player gains 1 victory point; if it belonged to you, put the Fracture into play and place 1 additional ingress token in a system that contains your units.",
+        "text": "Choose and purge a relic. If the relic belonged to another player, that player gains 1 victory point; if it belonged to you, put The Fracture into play and place 1 additional ingress token in a system that contains your units.",
         "source": "twilights_fall"
     },
     {
@@ -298,7 +298,7 @@
     },
     {
         "alias": "tf-coerce",
-        "name": "Ignis",
+        "name": "Coerce",
         "phase": "Action",
         "window": "Action",
         "text": "Choose a player; that player must give you 1 of their abilities.",
@@ -341,7 +341,7 @@
         "name": "Starflare",
         "phase": "Action",
         "window": "Action",
-        "text": "Choose a supernova; each player destroys 3 of their units in that supernova and each adjacent system.",
+        "text": "Choose a supernova; each player destroys 3 of their units in that supernova and each adjacent system. [Note: cannot be played if there is no supernova on the board. In such a case, consider getting table permission to purge this AC and draw a new one.]",
         "source": "twilights_fall"
     },
     {

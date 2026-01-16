@@ -4,7 +4,7 @@ function Secrets({ dataDir, dataSources, handleDataSourceChange}) {
 
     const objectiveSources = [
         //'data/public_objectives/public_objectives.json',
-        'data/secret_objectives/secret_objectives.json',
+        'TI4_map_generator_bot/src/main/resources/data/secret_objectives/secret_objectives.json',
     ];
     const [data, setData] = useState([]);
 
